@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin="" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+
+  <title>Bike location</title>
+
+</head>
+
+<body>
+  <div id="bloc-page">
+    <header>
+      <img src="image/BikelocationT.png" id="logo" alt="logo" />
+    </header>
+
+    <section id="sectionUn">
+      <div id="slideImage">
+
+        <div id="buttonContainer">
+          <button id="leftArrow">
+            <i class="fas fa-angle-left"></i>
+          </button>
+
+          <button id="buttonPaus">
+            <i class="fas fa-pause"></i>
+          </button>
+
+          <button id="rightArrow">
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+
+        <ul id="containerSlideImg">
+          <li class="slideImg"> <img src="image/slide/sD1.jpg" alt="vélo" /></li>
+          <!--srcset="image/slider/sD1_640.jpg 640w,
+                             images/slider/bg1.jpg 900w" sizes="1000px" title="slider" Pour changer la qualité de l'image en fonction de l'écran ?-->
+          <li class="slideImg"> <img src="image/slide/sD2.jpg" alt="vélo" /></li>
+          <li class="slideImg"> <img src="image/slide/sD3.jpg" alt="vélo" /></li>
+          <li class="slideImg"> <img src="image/slide/sD4.jpg" alt="vélo" /></li>
+        </ul>
+
+      </div>
+
+      <div id="slideDescription">
+        <h1><strong>BIKE LOCATION</strong> : LOCATION DE VÉLO !</h1>
+        <p> Vous souhaitez un moyen de transport écologique ? La BikeLocation vous aide dans vos déplacements !</p>
+        <!-- <a href="#" class="bouton">Plus d'infos</a> -->
+      </div>
+    </section>
+
+    <section id="sectionDeux">
+      <div id="mapVelo">
+      </div>
+
+      <div id="formul">
+        <form method="post" action="traitement.php">
+
+          <fieldset>
+            <div id="textFieldset">
+              <h2>Detail de la station</h2>
+              <h3>Adresse :</h3>
+              <div id="infoStation">
+                <p id="stationName"></p>
+                <p id="stationAddress"></p>
+                <p id="stationStatus"></p>
+                <p id="stationStand"></p>
+                <p id="stationBikes"></p>
+              </div>
+
+            </div>
+
+            <p id='formulP1'>
+              <label for="Nom"> Nom :</label><br>
+              <input type="text" name="Nom" id="Nom" />
+            </p>
+
+            <p id='formulP2'>
+              <label for="Prenom"> Prénom :</label><br>
+              <input type="text" name="Prenom" id="Pnom" />
+            </p>
+
+            <p id='formulP3'>
+              <input type="submit" value="Réserver" id="btEnvoyer" />
+            </p>
+          </fieldset>
+
+        </form>
+
+      </div>
+  </div>
+  </section>
+
+  <footer>
+
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
+  <script src="js/ajaxG.js"></script>
+  <script src="js/main.js"></script>
+
+  <script src="js/slider.js"></script>
+  <script src="js/map.js"></script>
+
+</body>
+
+</html>
