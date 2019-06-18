@@ -1,2 +1,2 @@
 # bikeLocation
-site for location bike
+site web to rent bikes
