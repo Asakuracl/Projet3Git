@@ -1,0 +1,154 @@
+body {
+  background-color: #cc9f18;
+}
+
+#bloc-page {
+  margin: auto;
+  width: 900px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: whitesmoke;
+}
+
+p {
+  color: whitesmoke;
+  font-size: 15px;
+}
+
+/* header */
+
+#logo {
+  width: 20%;
+  margin-top: -0.5em;
+}
+
+/* SectionUn */
+
+#slideImage {
+  overflow: hidden;
+  box-shadow: 0.5em 0.5em 3em #342922;
+  border: solid 0.2em #342922;
+  border-radius: 0.3em;
+  width: 897px;
+  height: 377px;
+}
+
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 20em;
+}
+
+#leftArrow {
+  font-size: 2.5em;
+  color: #342922;
+  background-color: rgba(204, 159, 24, 0.7);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+#buttonPaus {
+  font-size: 1.5em;
+  color: #342922;
+  background-color: rgba(204, 159, 24, 0.7);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  margin: 0 1.5em 0 1.5em;
+}
+
+#rightArrow {
+  font-size: 2.5em;
+  color: #342922;
+  background-color: rgba(204, 159, 24, 0.7);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+#slideDescription {
+  margin: 2em 0 2em 0;
+}
+
+#containerSlideImg {
+  display: flex;
+  padding-left: 0px;
+  list-style: none;
+  /*overflow: hidden;*/
+}
+
+.slideImg {
+  /*border: solid 0.2em whitesmoke;*/
+  /*border-radius: 0.3em;*/
+  height: 380px;
+  margin-top: -4.1em;
+}
+
+#sectionDeux {
+  display: flex;
+  width: 1200px;
+  margin: auto;
+}
+
+#mapVelo {
+  height: 410px;
+  width: 800px;
+  border: solid 0.2em #342922;
+  border-radius: 1em;
+  margin-left: -200px;
+}
+
+#formul {
+  border: solid 0.2em #342922;
+  border-radius: 1em;
+  height: 410px;
+  width: 390px;
+
+  background-image: linear-gradient(
+    to bottom right,
+    #cc9f18 50%,
+    rgba(52, 41, 34, 0.8) 0%
+  );
+  margin-left: 10px;
+}
+
+#infoStation p {
+  color: #342922;
+}
+
+#formulP1,
+#formulP2 {
+  margin-left: 14em;
+}
+
+#formulP3 {
+  margin-left: 19em;
+}
+
+fieldset {
+  border: none;
+}
+
+input {
+  background-color: #342922;
+  color: white;
+
+  border: solid 0.2em whitesmoke;
+  border-radius: 1em;
+}
+
+footer {
+  margin-top: 10em;
+}
