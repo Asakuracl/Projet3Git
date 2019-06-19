@@ -13,8 +13,7 @@ class leafMap {
     }
 
     setMarker(reponse) {
-        this.stations = JSON.parse(reponse);
-        console.log(this.stations);
+        this.stations;
     }
 
     init() {
