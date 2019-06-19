@@ -15,8 +15,8 @@ class leafMap {
     init() {
         ajaxGet("https://api.jcdecaux.com/vls/v1/stations?contract=toulouse&apiKey=034bd9ac4f75e74fe7ca15956aec17853c048759", setMarker(reponse) {
             // Transforme la réponse en tableau d'objets JavaScript
-            const stations = JSON.parse(reponse);
-            //console.log(stations)
+            this.stations;
+            console.log(this.stations);
             // Affiche les stations
             /*
             for(let station of stations) {
@@ -40,21 +40,22 @@ class leafMap {
                 })
 
             }
+            */
         });
-        */
-        }
+
+    }
 
 
 }
 
 
-    const map = L.map("mapVelo").setView([43.6, 1.43], 14);
-    L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.fr/open-data/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-        maxZoom: 18
+const map = L.map("mapVelo").setView([43.6, 1.43], 14);
+L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.fr/open-data/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    maxZoom: 18
 
 }).addTo(map);
 
-    const mymap = new leafMap(map);
+const mymap = new leafMap(map);
 
-    mymap.mark();
+mymap.mark();
