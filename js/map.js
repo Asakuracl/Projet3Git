@@ -8,12 +8,16 @@ class leafMap {
 
         // ajout this.marker ?
 
-        this.point = function (reponse) {
+
+    }
+
+    mark() {
+        ajaxGet("https://api.jcdecaux.com/vls/v1/stations?contract=toulouse&apiKey=034bd9ac4f75e74fe7ca15956aec17853c048759", setMarker(reponse) {
             // Transforme la réponse en tableau d'objets JavaScript
             const stations = JSON.parse(reponse);
             //console.log(stations)
             // Affiche les stations
-            for (let station of stations) {
+            for(let station of stations) {
                 //console.log(station);
                 //console.log(station.position.lat);
                 const marker = L.marker([station.position.lat, station.position.lng]).addTo(map);
@@ -34,12 +38,7 @@ class leafMap {
                 })
 
             }
-        }
-
-    }
-
-    mark() {
-        ajaxGet("https://api.jcdecaux.com/vls/v1/stations?contract=toulouse&apiKey=034bd9ac4f75e74fe7ca15956aec17853c048759", this.point);
+        });
         // /*
 
         // */
