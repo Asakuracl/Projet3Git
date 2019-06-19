@@ -15,6 +15,9 @@ class leafMap {
     setMarker(reponse) {
         const stations = JSON.parse(reponse);
 
+        for (let station of stations) {
+            console.log(station)
+        }
     }
 
     init() {
