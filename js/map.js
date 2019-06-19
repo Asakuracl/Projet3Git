@@ -6,9 +6,12 @@ class leafMap {
 
         this.map = map;
         this.urlAkey = "https://api.jcdecaux.com/vls/v1/stations?contract=toulouse&apiKey=034bd9ac4f75e74fe7ca15956aec17853c048759";
-        //this.stations = JSON.parse(reponse);
-        // ajout this.marker ?
 
+        this.stationName = document.querySelector("#stationName");
+        this.stationAddress = document.querySelector("#stationAddress");
+        this.stationStatus = document.querySelector("#stationStatus");
+        this.stationStand = document.querySelector("#stationStand");
+        this.stationBikes = document.querySelector("#stationBikes");
 
     }
 
@@ -16,7 +19,9 @@ class leafMap {
         const stations = JSON.parse(reponse);
 
         for (let station of stations) {
-            console.log(station)
+            const markers = L.marker([station.position.lat, station.position.lng]).addTo(map);
+
+
         }
     }
 
