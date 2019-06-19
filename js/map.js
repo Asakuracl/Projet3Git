@@ -5,7 +5,8 @@ class leafMap {
     constructor(map) {
 
         this.map = map;
-
+        this.url = "https://api.jcdecaux.com/vls/v1/stations?contract=toulouse&";
+        this.apiKey = "apiKey=034bd9ac4f75e74fe7ca15956aec17853c048759";
         //this.stations = JSON.parse(reponse);
         // ajout this.marker ?
 
@@ -18,7 +19,7 @@ class leafMap {
     }
 
     init() {
-        ajaxGet("https://api.jcdecaux.com/vls/v1/stations?contract=toulouse&apiKey=034bd9ac4f75e74fe7ca15956aec17853c048759", this.setMarker)
+        ajaxGet(this.url + this.apiKey, this.setMarker)
         /*
         {
             // Transforme la réponse en tableau d'objets JavaScript
