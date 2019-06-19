@@ -6,6 +6,7 @@ class leafMap {
 
         this.map = map;
 
+        this.stations = JSON.parse(reponse);
         // ajout this.marker ?
 
 
@@ -17,6 +18,7 @@ class leafMap {
             const stations = JSON.parse(reponse);
             //console.log(stations)
             // Affiche les stations
+            /*
             for(let station of stations) {
                 //console.log(station);
                 //console.log(station.position.lat);
@@ -39,22 +41,20 @@ class leafMap {
 
             }
         });
-        // /*
-
-        // */
-    }
+        */
+        }
 
 
 }
 
 
-const map = L.map("mapVelo").setView([43.6, 1.43], 14);
-L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.fr/open-data/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-    maxZoom: 18
+    const map = L.map("mapVelo").setView([43.6, 1.43], 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.fr/open-data/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+        maxZoom: 18
 
 }).addTo(map);
 
-const mymap = new leafMap(map);
+    const mymap = new leafMap(map);
 
-mymap.mark();
+    mymap.mark();
