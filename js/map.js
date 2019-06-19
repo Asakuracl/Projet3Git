@@ -13,7 +13,7 @@ class leafMap {
     }
 
     init() {
-        ajaxGet("https://api.jcdecaux.com/vls/v1/stations?contract=toulouse&apiKey=034bd9ac4f75e74fe7ca15956aec17853c048759", function (reponse) {
+        ajaxGet("https://api.jcdecaux.com/vls/v1/stations?contract=toulouse&apiKey=034bd9ac4f75e74fe7ca15956aec17853c048759", function setMarker(reponse) {
             // Transforme la réponse en tableau d'objets JavaScript
             this.stations;
             console.log(this.stations);
