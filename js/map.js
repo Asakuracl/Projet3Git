@@ -18,7 +18,7 @@ class leafMap {
     }
 
     init() {
-        ajaxGet("https://api.jcdecaux.com/vls/v1/stations?contract=toulouse&apiKey=034bd9ac4f75e74fe7ca15956aec17853c048759", setMarker(reponse))
+        ajaxGet("https://api.jcdecaux.com/vls/v1/stations?contract=toulouse&apiKey=034bd9ac4f75e74fe7ca15956aec17853c048759", this.setMarker)
         /*
         {
             // Transforme la réponse en tableau d'objets JavaScript
@@ -65,4 +65,4 @@ L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
 
 const mymap = new leafMap(map);
 
-mymap.mark();
+mymap.init();
