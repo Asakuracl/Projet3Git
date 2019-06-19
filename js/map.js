@@ -21,7 +21,12 @@ class leafMap {
         for (let station of stations) {
             const markers = L.marker([station.position.lat, station.position.lng]).addTo(map);
 
+            markers.addEventListener('click', function () {
 
+                //1
+                document.getElementById("stationName").innerHTML = station.name;
+
+            });
         }
     }
 
@@ -38,22 +43,22 @@ class leafMap {
                 //console.log(station);
                 //console.log(station.position.lat);
                 const marker = L.marker([station.position.lat, station.position.lng]).addTo(map);
-
+ 
                 marker.addEventListener('click', function () {
-
+ 
                     //1
                     document.getElementById("stationName").innerHTML = station.name;
-
+ 
                     document.getElementById("stationAddress").innerHTML = station.address;
-
+ 
                     document.getElementById("stationStatus").innerHTML = "Etat station: " + station.status;
-
+ 
                     document.getElementById("stationStand").innerHTML = "Places diponibles: " + station.bike_stands;
-
+ 
                     document.getElementById("stationBikes").innerHTML = "Vélos diponibles: " + station.available_bikes;
-
+ 
                 })
-
+ 
             }
         
         });
