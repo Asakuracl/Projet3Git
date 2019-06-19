@@ -6,14 +6,21 @@ class leafMap {
 
         this.map = map;
 
-        this.stations = JSON.parse(reponse);
+        //this.stations = JSON.parse(reponse);
         // ajout this.marker ?
 
 
     }
 
+    setMarker(reponse) {
+        this.stations = JSON.parse(reponse);
+        console.log(this.stations);
+    }
+
     init() {
-        ajaxGet("https://api.jcdecaux.com/vls/v1/stations?contract=toulouse&apiKey=034bd9ac4f75e74fe7ca15956aec17853c048759", function setMarker(reponse) {
+        ajaxGet("https://api.jcdecaux.com/vls/v1/stations?contract=toulouse&apiKey=034bd9ac4f75e74fe7ca15956aec17853c048759", setMarker(reponse))
+        /*
+        {
             // Transforme la réponse en tableau d'objets JavaScript
             this.stations;
             console.log(this.stations);
@@ -43,10 +50,10 @@ class leafMap {
         
         });
         */
-        });
-    }
-
+    };
 }
+
+
 
 
 const map = L.map("mapVelo").setView([43.6, 1.43], 14);
