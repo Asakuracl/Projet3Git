@@ -9,13 +9,13 @@ class leafMap {
 
         this.stations = null;
         this.markers = null;
-
-        this.stationName = document.querySelector("#stationName");
-        this.stationAddress = document.querySelector("#stationAddress");
-        this.stationStatus = document.querySelector("#stationStatus");
-        this.stationStand = document.querySelector("#stationStand");
-        this.stationBikes = document.querySelector("#stationBikes");
-
+        /*
+                this.stationName = document.querySelector("#stationName");
+                this.stationAddress = document.querySelector("#stationAddress");
+                this.stationStatus = document.querySelector("#stationStatus");
+                this.stationStand = document.querySelector("#stationStand");
+                this.stationBikes = document.querySelector("#stationBikes");
+        */
 
     }
 
@@ -37,37 +37,6 @@ class leafMap {
 
     init() {
         ajaxGet(this.urlAkey, this.setMarker.bind(this))
-        /*
-        {
-            // Transforme la réponse en tableau d'objets JavaScript
-            this.stations;
-            console.log(this.stations);
-            // Affiche les stations
-            /*
-            for(let station of stations) {
-                //console.log(station);
-                //console.log(station.position.lat);
-                const marker = L.marker([station.position.lat, station.position.lng]).addTo(map);
- 
-                marker.addEventListener('click', function () {
- 
-                    //1
-                    document.getElementById("stationName").innerHTML = station.name;
- 
-                    document.getElementById("stationAddress").innerHTML = station.address;
- 
-                    document.getElementById("stationStatus").innerHTML = "Etat station: " + station.status;
- 
-                    document.getElementById("stationStand").innerHTML = "Places diponibles: " + station.bike_stands;
- 
-                    document.getElementById("stationBikes").innerHTML = "Vélos diponibles: " + station.available_bikes;
- 
-                })
- 
-            }
-        
-        });
-        */
     };
 }
 
