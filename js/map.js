@@ -22,7 +22,7 @@ class leafMap {
         for (let station of stations) {
             const markers = L.marker([station.position.lat, station.position.lng]).addTo(map);
 
-            markers.addEventListener('click', function () {
+            markers.addEventListener("click", function () {
                 stationName.innerHTML = station.name;
                 stationAddress.innerHTML = station.address;
                 stationStatus.innerHTML = station.status;
