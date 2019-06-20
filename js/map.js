@@ -13,6 +13,7 @@ class leafMap {
         this.stationStand = document.querySelector("#stationStand");
         this.stationBikes = document.querySelector("#stationBikes");
 
+
     }
 
     setMarker(reponse) {
@@ -22,10 +23,11 @@ class leafMap {
             const markers = L.marker([station.position.lat, station.position.lng]).addTo(map);
 
             markers.addEventListener('click', function () {
-
-                //1
-                document.getElementById("stationName").innerHTML = station.name;
-
+                stationName.innerHTML = station.name;
+                stationAddress.innerHTML = station.address;
+                stationStatus.innerHTML = station.status;
+                stationStand.innerHTML = station.bike_stands;
+                stationBikes.innerHTML = station.available_bikes;
             });
         }
     }
