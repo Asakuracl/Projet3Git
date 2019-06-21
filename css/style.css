@@ -127,12 +127,12 @@ p {
   color: #342922;
 }
 
-#formulP1,
-#formulP2 {
+#formulNom,
+#formulPrenom {
   margin-left: 14em;
 }
 
-#formulP3 {
+#formulBouton {
   margin-left: 19em;
 }
 
