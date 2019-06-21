@@ -7,8 +7,8 @@ class leafMap {
         this.map = map;
         this.urlAkey = "https://api.jcdecaux.com/vls/v1/stations?contract=toulouse&apiKey=034bd9ac4f75e74fe7ca15956aec17853c048759";
 
-        this.stations = null;
-        this.markers = null;
+        //this.stations = null;
+        //this.markers = null;
         /*
                 this.stationName = document.querySelector("#stationName");
                 this.stationAddress = document.querySelector("#stationAddress");
