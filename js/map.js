@@ -31,6 +31,8 @@ class leafMap {
                 stationStatus.innerHTML = station.status;
                 stationStand.innerHTML = station.bike_stands;
                 stationBikes.innerHTML = station.available_bikes;
+
+                document.querySelector(".hidden").classList.remove("hidden");
             });
         }
     }
