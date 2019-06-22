@@ -27,11 +27,26 @@ class leafMap {
 
             //on markers click add station information
             this.markers.addEventListener("click", function () {
+
                 stationName.innerHTML = station.name;
                 stationAddress.innerHTML = station.address;
                 stationStatus.innerHTML = station.status;
                 stationStand.innerHTML = station.bike_stands;
                 stationBikes.innerHTML = station.available_bikes;
+
+                //change english word status
+                if (station.status === "OPEN") {
+                    this.open = station.status
+                    this.change = this.open.replace("OPEN", "Ouvert");
+                    stationStatus.innerHTML = this.change;
+                } else {
+                    this.close = station.status
+                    this.change = this.close.replace("CLOSED", "Fermé");
+                    stationStatus.innerHTML = this.change;
+                }
+
+
+
 
                 //show name, and button when click on markers
                 this.hidden = document.querySelectorAll(".hidden");
