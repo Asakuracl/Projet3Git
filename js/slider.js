@@ -6,7 +6,7 @@ class sliderShow {
         this.container = container;
         this.variable = 0;
         this.dist = -900;
-        this.temps = 2000;
+        this.temps = 5000;
         this.interv = null;
         this.demarre = false;
 
