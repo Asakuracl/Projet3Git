@@ -25,6 +25,7 @@ class leafMap {
         for (let station of this.stations) {
             this.markers = L.marker([station.position.lat, station.position.lng]).addTo(map);
             //vérifier statut close console.log(station.status)
+
             //on markers click add station information
             this.markers.addEventListener("click", function () {
 
@@ -48,7 +49,7 @@ class leafMap {
 
 
 
-                //show name, and button when click on markers
+                //show name only on available bikes, and button when click on markers
                 this.hidden = document.querySelectorAll(".hidden");
 
                 for (let i = 0; i < this.hidden.length; i++) {
