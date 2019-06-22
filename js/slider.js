@@ -22,7 +22,7 @@ class sliderShow {
         this.buttonPaus.addEventListener("click", this.buttonStop.bind(this));
 
         //keyboard
-        document.addEventListener("keydown", this.keydown.bind(this));
+        document.addEventListener("keydown", this.keyboard.bind(this));
 
     }
 
@@ -74,7 +74,13 @@ class sliderShow {
     }
 
     // Change image with keyboard
-
+    keyboard(e) {
+        if (e.keyCode === 39) {
+            this.buttonNext();
+        } else if (e.keyCode === 37) {
+            this.buttonPrev();
+        }
+    };
 
 
     //activer interval
