@@ -127,6 +127,13 @@ p {
   color: #342922;
 }
 
+#stationName {
+  heigh: 0.5em;
+}
+#stationAddress {
+  height: 1.8em;
+}
+
 #formulInput {
   position: relative;
   bottom: 1.2em;
