@@ -127,6 +127,11 @@ p {
   color: #342922;
 }
 
+#formulInput {
+  position: relative;
+  bottom: 1.2em;
+}
+
 #formulNom,
 #formulPrenom {
   margin-left: 14em;
@@ -134,6 +139,10 @@ p {
 
 #formulBouton {
   margin-left: 19em;
+}
+
+.hidden {
+  display: none;
 }
 
 fieldset {
