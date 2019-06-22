@@ -32,7 +32,12 @@ class leafMap {
                 stationStand.innerHTML = station.bike_stands;
                 stationBikes.innerHTML = station.available_bikes;
 
-                document.querySelector(".hidden").classList.remove("hidden");
+                //
+                this.hiddens = document.querySelectorAll(".hidden");
+
+                for (let i = 0; i < this.hiddens.length; i++) {
+                    this.hiddens[i].classList.remove("hidden");
+                }
             });
         }
     }
