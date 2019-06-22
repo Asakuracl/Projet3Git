@@ -29,12 +29,6 @@ class sliderShow {
     // Changement d'image auto
     sliderAuto() {
 
-        /* pas possible ?
-        for (this.variable < this.images.length - 1; this.variable++;) {
-            this.container.style.marginLeft = (this.variable * this.dist) + "px";
-        }
-        */
-
         if (this.variable > this.images.length - 1) {
             this.variable = 0;
         }
