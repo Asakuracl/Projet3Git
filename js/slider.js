@@ -20,6 +20,10 @@ class sliderShow {
 
         this.buttonPaus = document.querySelector("#buttonPaus");
         this.buttonPaus.addEventListener("click", this.buttonStop.bind(this));
+
+        //keyboard
+        document.addEventListener("keydown", this.keydown.bind(this));
+
     }
 
     // Changement d'image auto
@@ -39,7 +43,7 @@ class sliderShow {
 
     }
 
-    // Changement d'image avec souris
+    // Change image with whith click on button
     buttonNext() {
 
         if (this.variable > this.images.length - 1) {
@@ -69,6 +73,9 @@ class sliderShow {
         this.demarre = !this.demarre;
     }
 
+    // Change image with keyboard
+
+
 
     //activer interval
     lancerDiap() {
@@ -86,4 +93,4 @@ const slider = new sliderShow(images, container);
 
 
 //Pour lancer le sliderAuto, enlever commentaire
-//slider.lancerDiap();
+slider.lancerDiap();
