@@ -32,7 +32,7 @@ class leafMap {
                 stationStand.innerHTML = station.bike_stands;
                 stationBikes.innerHTML = station.available_bikes;
 
-                //
+                //show name, and buton when click on markers
                 this.hiddens = document.querySelectorAll(".hidden");
 
                 for (let i = 0; i < this.hiddens.length; i++) {
