@@ -33,6 +33,7 @@ class leafMap {
                 stationAddress.innerHTML = station.address;
                 stationStatus.innerHTML = station.status;
                 stationStand.innerHTML = station.bike_stands;
+                stationBikes.innerHTML = station.available_bikes;
 
                 //show name, button only on available bikes, when click on markers
                 this.hidden = document.querySelectorAll(".hidden");
@@ -41,26 +42,20 @@ class leafMap {
                     for (let i = 0; i < this.hidden.length; i++) {
                         this.hidden[i].style.display = "none";
                     }
+                    //change english word status
+                    this.close = station.status;
+                    this.otherChange = this.close.replace("OPEN", "Fermé");
+                    stationStatus.innerHTML = this.otherChange;
 
-                    stationBikes.innerHTML = station.available_bikes;
                 } else if (station.available_bikes > 0) {
                     for (let i = 0; i < this.hidden.length; i++) {
                         this.hidden[i].style.display = "block";
                     }
-
-                    stationBikes.innerHTML = station.available_bikes;
-
-                }
-
-                //change english word status
-                if (station.status === "OPEN") {
-                    this.open = station.status
+                    //change english word status
+                    this.open = station.status;
                     this.change = this.open.replace("OPEN", "Ouvert");
                     stationStatus.innerHTML = this.change;
-                } else {
-                    this.close = station.status
-                    this.change = this.close.replace("CLOSED", "Fermée");
-                    stationStatus.innerHTML = this.change;
+
                 }
 
             });
