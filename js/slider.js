@@ -93,4 +93,4 @@ const slider = new sliderShow(images, container);
 
 
 //Pour lancer le sliderAuto, enlever commentaire
-slider.lancerDiap();
+//slider.lancerDiap();
