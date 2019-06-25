@@ -9,6 +9,12 @@ class leafMap {
 
         //this.stations = null;
         //this.markers = null;
+
+        //add verification of name value
+
+        this.btEnvoyer = document.querySelector("#btEnvoyer");
+
+        this.btEnvoyer.addEventListener("click", this.reserve.bind(this));
         /*
                 this.stationName = document.querySelector("#stationName");
                 this.stationAddress = document.querySelector("#stationAddress");
@@ -60,6 +66,12 @@ class leafMap {
 
             });
         }
+    }
+
+    reserve() {
+        this.bike = document.querySelector("#stationBikes");
+        this.bike.innerHTML -= 1;
+        console.log(this.bike);
     }
 
     init() {
