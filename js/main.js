@@ -1,5 +1,5 @@
 //anime button on slider
-/*
+
 $("#leftArrow").hide();
 
 $("#slideImage").mouseover(function () {
@@ -7,4 +7,3 @@ $("#slideImage").mouseover(function () {
         height: "toggle"
     })
 });
-*/
