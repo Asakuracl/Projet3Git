@@ -1,9 +1,9 @@
 //anime button on slider
 
-$("#leftArrow").hide();
+$(".jqButton").hide();
 
 $("#slideImage").mouseover(function () {
-    $("#leftArrow").show().animate({
-        height: "toggle"
-    })
+    $(".jqButton").animate({
+        height: "show"
+    }, 800)
 });
