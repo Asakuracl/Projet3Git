@@ -164,6 +164,24 @@ input {
   border-radius: 1em;
 }
 
+#CanvasHead {
+  position: relative;
+  bottom: 416px;
+  left: 615px;
+  border: solid 0.2em #342922;
+  border-radius: 1em;
+  height: 410px;
+  width: 390px;
+
+  background-image: linear-gradient(
+    to top left,
+    #cc9f18 50%,
+    rgba(52, 41, 34, 0.8) 0%
+  );
+
+  text-align: center;
+}
+
 footer {
   margin-top: 10em;
 }
