@@ -146,14 +146,21 @@ p {
 }
 
 #formulBouton {
-  margin-left: 19em;
+  margin-left: 15.85em;
+  width: 145px;
+  height: 22px;
+}
+
+#formulBouton:hover {
+  box-shadow: 0.5em 0.3em 0.8em rgba(204, 159, 24, 0.5);
 }
 
 fieldset {
   border: none;
 }
 
-input {
+input,
+#formulBouton {
   background-color: #342922;
   color: white;
 
