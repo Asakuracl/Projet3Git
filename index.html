@@ -51,79 +51,76 @@
       <div id="slideDescription">
         <h1><strong>BIKE LOCATION</strong> : LOCATION DE VÉLO !</h1>
         <p> Vous souhaitez un moyen de transport écologique ? La BikeLocation vous aide dans vos déplacements !</p>
-        <!-- <a href="#" class="bouton">Plus d'infos</a> -->
       </div>
+
     </section>
 
     <section id="sectionDeux">
       <div id="mapVelo">
       </div>
 
-      <div id="formul">
-        <form>
-          <fieldset>
-            <div id="textFieldset">
-              <h2>Detail de la station</h2>
-              <p id="stationName"></p>
-              <h3>Adresse :</h3>
-              <p id="stationAddress"></p>
-              <p>Etat staion :
-                <span id="stationStatus"></span>
-              </p>
-              <p>Places disponibles :
-                <span id="stationStand"></span>
-              </p>
-              <p>Vélos disponible :
-                <span id="stationBikes"></span>
-              </p>
-            </div>
+      <form id="formul">
+        <fieldset>
+          <div id="textFieldset">
+            <h2>Detail de la station</h2>
+            <p id="stationName"></p>
+            <h3>Adresse :</h3>
+            <p id="stationAddress"></p>
+            <p>Etat staion :
+              <span id="stationStatus"></span>
+            </p>
+            <p>Places disponibles :
+              <span id="stationStand"></span>
+            </p>
+            <p>Vélos disponible :
+              <span id="stationBikes"></span>
+            </p>
+          </div>
 
-            <div id="formulInput">
-              <p id="formulNom">
-                <label for="Nom"> Nom :</label><br>
-                <input type="text" name="Nom" id="Nom" required />
-              </p>
+          <div id="formulInput">
+            <p id="formulNom">
+              <label for="Nom"> Nom :</label><br>
+              <input type="text" name="Nom" id="Nom" required />
+            </p>
 
-              <p id="formulPrenom">
-                <label for="Prenom"> Prénom :</label><br>
-                <input type="text" name="Prenom" id="Pnom" required />
-              </p>
+            <p id="formulPrenom">
+              <label for="Prenom"> Prénom :</label><br>
+              <input type="text" name="Prenom" id="Pnom" required />
+            </p>
 
-              <button id="formulBouton">Réserver
-              </button>
-            </div>
-      </div>
-
-      </fieldset>
+            <button id="formulBouton">Réserver
+            </button>
+          </div>
+        </fieldset>
       </form>
+    </section>
+
+    <div id="canvasHead">
+      <h3>Votre signature pour valider s'il vous plait</h3>
+      <canvas id=canvas></canvas>
+    </div>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""></script>
+
+    <script src="js/reserve.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/slider.js"></script>
+    <script src="js/map.js"></script>
+
   </div>
-  </section>
-
-  <div id="canvasHead">
-    <h3>Votre signature pour valider s'il vous plait</h3>
-    <canvas id=canvas></canvas>
-  </div>
-
-  <footer>
-
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-
-  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
-    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-    crossorigin=""></script>
-
-  <script src="js/reserve.js"></script>
-  <script src="js/main.js"></script>
-
-  <script src="js/slider.js"></script>
-  <script src="js/map.js"></script>
-
 </body>
 
 </html>
