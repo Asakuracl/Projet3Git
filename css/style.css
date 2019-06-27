@@ -161,7 +161,7 @@ input {
   border-radius: 1em;
 }
 
-#CanvasHead {
+#canvasHead {
   position: relative;
   bottom: 416px;
   left: 615px;
