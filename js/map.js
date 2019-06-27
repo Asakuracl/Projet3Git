@@ -24,13 +24,17 @@ class leafMap {
                 document.querySelector("#stationStand").innerHTML = station.bike_stands;
                 document.querySelector("#stationBikes").innerHTML = station.available_bikes;
 
-                //show name, button only on available bikes, when click on markers
+                //show name & button only on available bikes, when click on markers
                 this.hidden = document.querySelector("#formulInput");
+                this.btHidden = document.querySelector('#formulBouton');
+
 
                 if (station.available_bikes !== 0) {
                     this.hidden.style.display = "block";
+                    this.btHidden.style.display = "block";
                 } else {
                     this.hidden.style.display = "none";
+                    this.btHidden.style.display = "none";
                     stationStatus.innerHTML = "fermée";
                 }
             });
