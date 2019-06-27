@@ -6,13 +6,6 @@ class leafMap {
         this.map = map;
         this.urlAkey = "https://api.jcdecaux.com/vls/v1/stations?contract=toulouse&apiKey=034bd9ac4f75e74fe7ca15956aec17853c048759";
 
-        this.stations = null
-
-        //
-        this.btEnvoyer = document.querySelector("#btEnvoyer");
-
-        this.btEnvoyer.addEventListener("click", this.reserve.bind(this));
-        //
     }
 
     setMarker(reponse) {
@@ -43,13 +36,6 @@ class leafMap {
             });
         }
     }
-
-    //
-    reserve() {
-        this.bike = document.querySelector("#stationBikes");
-        this.bike.innerHTML -= 1;
-    }
-    //
 
     ajaxGet(url, callback) {
         let req = new XMLHttpRequest();
