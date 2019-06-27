@@ -1,5 +1,4 @@
-//ajout de la map
-// working on this oop :
+//add the map
 
 class leafMap {
     constructor(map) {
