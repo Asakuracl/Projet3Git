@@ -6,12 +6,17 @@ class leafMap {
         this.map = map;
         this.urlAkey = "https://api.jcdecaux.com/vls/v1/stations?contract=toulouse&apiKey=034bd9ac4f75e74fe7ca15956aec17853c048759";
 
+        this.stations = null
+
+        //
         this.btEnvoyer = document.querySelector("#btEnvoyer");
 
         this.btEnvoyer.addEventListener("click", this.reserve.bind(this));
+        //
     }
 
     setMarker(reponse) {
+
         this.stations = JSON.parse(reponse);
 
         for (let station of this.stations) {
@@ -39,15 +44,35 @@ class leafMap {
         }
     }
 
+    //
     reserve() {
         this.bike = document.querySelector("#stationBikes");
         this.bike.innerHTML -= 1;
-        console.log(this.bike);
+    }
+    //
+
+    ajaxGet(url, callback) {
+        let req = new XMLHttpRequest();
+        req.open("GET", url);
+        req.addEventListener("load", function () {
+            if (req.status >= 200 && req.status < 400) {
+                // Appelle la fonction callback en lui passant la réponse de la requête
+                callback(req.responseText);
+            } else {
+                console.error(req.status + " " + req.statusText + " " + url);
+            }
+        });
+        req.addEventListener("error", function () {
+            console.error("Erreur réseau avec l'URL " + url);
+        });
+        req.send(null);
     }
 
     init() {
-        ajaxGet(this.urlAkey, this.setMarker.bind(this))
+        this.ajaxGet(this.urlAkey, this.setMarker.bind(this))
     };
+
+
 }
 
 
