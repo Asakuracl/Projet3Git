@@ -151,6 +151,7 @@ p {
   right: 12.6em;
   width: 145px;
   height: 22px;
+  display: none;
 }
 
 #formulBouton:hover {
