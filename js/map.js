@@ -32,38 +32,26 @@ class leafMap {
             this.markers = L.marker([station.position.lat, station.position.lng]).addTo(map);
             //vérifier statut close console.log(station.status)
 
+            //testMode
+
             //on markers click add station information
             this.markers.addEventListener("click", function () {
 
                 stationName.innerHTML = station.name;
                 stationAddress.innerHTML = station.address;
-                stationStatus.innerHTML = station.status;
+                stationStatus.innerHTML = "Ouvert";
                 stationStand.innerHTML = station.bike_stands;
                 stationBikes.innerHTML = station.available_bikes;
 
                 //show name, button only on available bikes, when click on markers
-                this.hidden = document.querySelectorAll(".hidden");
+                this.hidden = document.querySelector("#formulInput");
 
-                if (station.available_bikes === 0) {
-                    for (let i = 0; i < this.hidden.length; i++) {
-                        this.hidden[i].style.display = "none";
-                    }
-                    //change english word status
-                    this.close = station.status;
-                    this.otherChange = this.close.replace("OPEN", "Fermé");
-                    stationStatus.innerHTML = this.otherChange;
-
-                } else if (station.available_bikes > 0) {
-                    for (let i = 0; i < this.hidden.length; i++) {
-                        this.hidden[i].style.display = "block";
-                    }
-                    //change english word status
-                    this.open = station.status;
-                    this.change = this.open.replace("OPEN", "Ouvert");
-                    stationStatus.innerHTML = this.change;
-
+                if (station.available_bikes !== 0) {
+                    this.hidden.style.display = "block";
+                } else {
+                    this.hidden.style.display = "none";
+                    stationStatus.innerHTML = "fermée";
                 }
-
             });
         }
     }
