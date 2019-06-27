@@ -137,6 +137,7 @@ p {
 #formulInput {
   position: relative;
   bottom: 1.2em;
+  display: none;
 }
 
 #formulNom,
@@ -146,10 +147,6 @@ p {
 
 #formulBouton {
   margin-left: 19em;
-}
-
-.hidden {
-  display: none;
 }
 
 fieldset {
