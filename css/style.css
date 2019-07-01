@@ -193,7 +193,10 @@ input,
 }
 
 #helpId {
-  text-align: center;
+  position: relative;
+  left: 8em;
+  top: 0.3em;
+  color: #cc9f18;
 }
 
 footer {
