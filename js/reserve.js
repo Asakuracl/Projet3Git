@@ -28,13 +28,9 @@ class reservation {
     reserve() {
         //enlever commentaire une fois prog ok
 
-        //this.formul.style.zIndex = "-1";
-        //this.formul.style.opacity = "0";
-        //this.btReserve.style.opacity = "0";
-        //
-
-        //this.name.addEventListener("blur", this.checkInput);
-
+        this.formul.style.zIndex = "-1";
+        this.formul.style.opacity = "0";
+        this.btReserve.style.opacity = "0";
 
     }
 
