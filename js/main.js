@@ -15,3 +15,9 @@ $("#formulBouton").on("click", function () {
         opacity: "hide"
     }, 800)
 });
+
+$("#formulBouton").on("click", function () {
+    $("#canvas").animate({
+        opacity: "1"
+    }, 1000)
+});
