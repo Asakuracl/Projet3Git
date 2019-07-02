@@ -5,7 +5,7 @@ class reservation {
         this.btReserve = btReserve;
         this.bike = document.querySelector("#stationBikes");
         this.formul = document.querySelector("#formul");
-        this.regexId = /a/;
+        this.regexId = /.+\w/;
 
         this.input = document.querySelector("#formulInput");
 
