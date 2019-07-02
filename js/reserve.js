@@ -36,11 +36,6 @@ class reservation {
             localStorage.setItem("Nom", this.nom.value);
             localStorage.setItem("Pnom", this.pnom.value);
             this.helpId.innerHTML = "";
-            /*
-            this.formul.style.zIndex = "-1";
-            this.formul.style.opacity = "0";
-            this.btReserve.style.opacity = "0";
-            */
         }
     }
 
