@@ -13,5 +13,5 @@ $("#slideImage").on("mouseover", function () {
 $("#formulBouton").on("click", function () {
     $("#formul").add("#formulBouton").animate({
         opacity: "hide"
-    }, 1000)
+    }, 800)
 });
