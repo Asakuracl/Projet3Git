@@ -167,10 +167,17 @@ fieldset {
 input,
 #formulBouton {
   background-color: #342922;
-  color: white;
+  color: whitesmoke;
 
   border: solid 0.2em whitesmoke;
   border-radius: 1em;
+}
+
+#helpId {
+  position: relative;
+  left: 8em;
+  top: 0.3em;
+  color: #cc9f18;
 }
 
 #canvasHead {
@@ -189,14 +196,13 @@ input,
   );
 
   text-align: center;
-  /*display: none;*/
 }
 
-#helpId {
-  position: relative;
-  left: 8em;
-  top: 0.3em;
-  color: #cc9f18;
+canvas {
+  width: 300px;
+  height: 200px;
+  background-color: whitesmoke;
+  opacity: 0;
 }
 
 footer {
