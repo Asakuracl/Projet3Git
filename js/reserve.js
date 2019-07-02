@@ -5,6 +5,7 @@ class reservation {
         this.btReserve = btReserve;
         this.bike = document.querySelector("#stationBikes");
         this.formul = document.querySelector("#formul");
+        this.regexId = /a/;
 
         this.input = document.querySelector("#formulInput");
 
@@ -19,7 +20,6 @@ class reservation {
         //
         this.btReserve.addEventListener("click", this.reserve.bind(this));
 
-        this.input.addEventListener("input", this.checkName.bind(this));
 
     }
 
@@ -28,25 +28,20 @@ class reservation {
     reserve() {
         //enlever commentaire une fois prog ok
 
-        this.formul.style.zIndex = "-1";
-        this.formul.style.opacity = "0";
-        this.btReserve.style.opacity = "0";
-
-    }
-
-    checkName(e) {
-        this.regexId = /a/;
         if ((this.nom.validity.valueMissing) || (this.pnom.validity.valueMissing)) {
             this.helpId.innerHTML = "Id manquant !"
-        } else if (!this.regexId.test(e.target.value)) {
+        } else if ((!this.regexId.test(this.nom.value)) || (!this.regexId.test(this.pnom.value))) {
             this.helpId.innerHTML = "Id invalide !"
         } else {
             localStorage.setItem("Nom", this.nom.value);
             localStorage.setItem("Pnom", this.pnom.value);
             this.helpId.innerHTML = "";
-            this.btReserve.style.display = "block";
+            /*
+            this.formul.style.zIndex = "-1";
+            this.formul.style.opacity = "0";
+            this.btReserve.style.opacity = "0";
+            */
         }
-
     }
 
 
