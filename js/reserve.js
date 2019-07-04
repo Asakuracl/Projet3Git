@@ -3,8 +3,10 @@
 class reservation {
     constructor(btReserve) {
         this.btReserve = btReserve;
+
         this.bike = document.querySelector("#stationBikes");
         this.formul = document.querySelector("#formul");
+        this.formulBt = document.querySelector("#formulBouton");
         this.regexId = /.+\w/;
 
         this.input = document.querySelector("#formulInput");
@@ -15,6 +17,26 @@ class reservation {
 
         this.helpId = document.getElementById("helpId");
 
+        this.canvas = document.querySelector("#canvas");
+
+        /*
+                this.signature = new SignaturePad(this.canvas);
+        
+                //this.signature.backgroundColor = "rgb(255,255,255)";
+                this.signature.minWidth = 1;
+                this.signature.maxWidth = 4;
+                this.signature.penColor = "rgb(204, 159, 24)";
+        */
+
+
+        this.canvas = document.querySelector("#canvas");
+
+        this.signature = new SignaturePad(this.canvas, {
+            minWidth: 1,
+            maxWidth: 1,
+            penColor: "rgb(204, 159, 24)",
+            backgroundColor: "rgba(52,41,34, 0.5)"
+        })
 
         this.canvasHead = document.querySelector("#canvasHead");
         //
@@ -36,6 +58,7 @@ class reservation {
             localStorage.setItem("Nom", this.nom.value);
             localStorage.setItem("Pnom", this.pnom.value);
             this.helpId.innerHTML = "";
+            //this.formulBt;
         }
     }
 
