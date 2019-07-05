@@ -52,8 +52,8 @@ class reservation {
         } else if ((!this.regexId.test(this.nom.value)) || (!this.regexId.test(this.pnom.value))) {
             this.helpId.innerHTML = "Id invalide !"
         } else {
-            localStorage.setItem("Nom", this.nom.value);
-            localStorage.setItem("Pnom", this.pnom.value);
+            //localStorage.setItem("Nom", this.nom.value);
+            //localStorage.setItem("Pnom", this.pnom.value);
             this.helpId.innerHTML = "";
             this.btReserve.style.opacity = "0";
             this.formul.style.opacity = "0";
