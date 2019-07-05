@@ -146,6 +146,12 @@ p {
   margin-left: 14em;
 }
 
+#Nom,
+#Pnom {
+  width: 142px;
+  height: 16px;
+}
+
 #formulBouton {
   position: relative;
   top: 27.85em;
