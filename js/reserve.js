@@ -17,8 +17,6 @@ class reservation {
 
         this.helpId = document.getElementById("helpId");
 
-        this.canvas = document.querySelector("#canvas");
-
         /*
                 this.signature = new SignaturePad(this.canvas);
         
@@ -35,7 +33,7 @@ class reservation {
             minWidth: 1,
             maxWidth: 1,
             penColor: "rgb(204, 159, 24)",
-            backgroundColor: "rgba(52,41,34, 0.5)"
+            backgroundColor: "rgba(52,41,34, 1)"
         })
 
         this.canvasHead = document.querySelector("#canvasHead");
@@ -60,6 +58,7 @@ class reservation {
             this.helpId.innerHTML = "";
             this.btReserve.style.opacity = "0";
             this.formul.style.opacity = "0";
+            this.formul.style.zIndex = "-1";
         }
     }
 
