@@ -25,9 +25,8 @@ class reservation {
                 this.signature.maxWidth = 4;
                 this.signature.penColor = "rgb(204, 159, 24)";
         */
-
-
         this.canvas = document.querySelector("#canvas");
+        this.canvas.style.opacity = "0";
 
         this.signature = new SignaturePad(this.canvas, {
             minWidth: 1,
@@ -59,6 +58,7 @@ class reservation {
             this.btReserve.style.opacity = "0";
             this.formul.style.opacity = "0";
             this.formul.style.zIndex = "-1";
+            this.canvas.style.opacity = "1";
         }
     }
 
