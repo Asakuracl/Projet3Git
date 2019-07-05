@@ -9,13 +9,13 @@ $("#slideImage").on("mouseover", function () {
 });
 
 //anime canvas pop
-
-
+/*
 $("#formulBouton").on("click", function () {
     $("#formul").add("#formulBouton").animate({
         opacity: "hide"
     }, 800)
 });
+*/
 
 
 $("#formulBouton").on("click", function () {
