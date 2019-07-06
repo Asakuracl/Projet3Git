@@ -39,7 +39,9 @@ class reservation {
         //
         this.btReserve.addEventListener("click", this.reserve.bind(this));
 
-
+        this.btValid = document.querySelector("#btValid");
+        this.btReset = document.querySelector("#btReset");
+        this.btReset.addEventListener("click", this.clear.bind(this))
     }
 
     //
@@ -59,7 +61,12 @@ class reservation {
             this.formul.style.opacity = "0";
             this.formul.style.zIndex = "-1";
             this.canvas.style.opacity = "1";
+            this.
         }
+    }
+
+    clear() {
+        this.signature.clear();
     }
 
 
