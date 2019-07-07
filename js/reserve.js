@@ -26,7 +26,6 @@ class reservation {
                 this.signature.penColor = "rgb(204, 159, 24)";
         */
         this.canvas = document.querySelector("#canvas");
-        this.canvas.style.opacity = "0";
 
         this.signature = new SignaturePad(this.canvas, {
             minWidth: 1,
@@ -39,8 +38,11 @@ class reservation {
         //
         this.btReserve.addEventListener("click", this.reserve.bind(this));
 
+        this.btCanvas = document.querySelector("#boutonCanvas");
+
         this.btValid = document.querySelector("#btValid");
         this.btReset = document.querySelector("#btReset");
+
         this.btReset.addEventListener("click", this.clear.bind(this))
     }
 
@@ -60,15 +62,13 @@ class reservation {
             this.btReserve.style.opacity = "0";
             this.formul.style.opacity = "0";
             this.formul.style.zIndex = "-1";
-            this.canvas.style.opacity = "1";
-            this.
+            this.canvasHead.style.opacity = "1";
         }
     }
 
     clear() {
         this.signature.clear();
     }
-
 
 }
 
