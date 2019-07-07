@@ -44,13 +44,12 @@ class reservation {
         this.btReset = document.querySelector("#btReset");
 
         this.btReset.addEventListener("click", this.clear.bind(this))
+
+        this.btValid.addEventListener("click", this.empty.bind(this))
+
     }
 
-    //
-
     reserve() {
-        //enlever commentaire une fois prog ok
-
         if ((this.nom.validity.valueMissing) || (this.pnom.validity.valueMissing)) {
             this.helpId.innerHTML = "Id manquant !"
         } else if ((!this.regexId.test(this.nom.value)) || (!this.regexId.test(this.pnom.value))) {
@@ -68,6 +67,12 @@ class reservation {
 
     clear() {
         this.signature.clear();
+    }
+
+    empty() {
+        if (this.signature.isEmpty()) {
+            alert("Merci de signer s'il vous plait.")
+        }
     }
 
 }
