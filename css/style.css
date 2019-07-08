@@ -5,6 +5,7 @@ body {
 #bloc-page {
   margin: auto;
   width: 900px;
+  height: 1200px;
 }
 
 h1,
@@ -221,5 +222,5 @@ input,
 }
 
 footer {
-  margin-top: 10em;
+  margin-bottom: 1em;
 }
