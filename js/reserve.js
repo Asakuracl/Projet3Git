@@ -13,7 +13,7 @@ class reservation {
 
         this.nom = document.querySelector("#Nom");
 
-        this.pnom = document.querySelector("#Pnom");
+        this.prenom = document.querySelector("#Prenom");
 
         this.helpId = document.getElementById("helpId");
 
@@ -50,9 +50,9 @@ class reservation {
     }
 
     reserve() {
-        if ((this.nom.validity.valueMissing) || (this.pnom.validity.valueMissing)) {
+        if ((this.nom.validity.valueMissing) || (this.prenom.validity.valueMissing)) {
             this.helpId.innerHTML = "Id manquant !"
-        } else if ((!this.regexId.test(this.nom.value)) || (!this.regexId.test(this.pnom.value))) {
+        } else if ((!this.regexId.test(this.nom.value)) || (!this.regexId.test(this.prenom.value))) {
             this.helpId.innerHTML = "Id invalide !"
         } else {
             //localStorage.setItem("Nom", this.nom.value);
