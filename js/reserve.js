@@ -35,7 +35,10 @@ class reservation {
         })
 
         this.canvasHead = document.querySelector("#canvasHead");
+
         //
+        this.addressData = document.querySelector("#addressData");
+
         this.btReserve.addEventListener("click", this.reserve.bind(this));
 
         this.btCanvas = document.querySelector("#boutonCanvas");
@@ -62,6 +65,9 @@ class reservation {
             this.formul.style.opacity = "0";
             this.formul.style.zIndex = "-1";
             this.canvasHead.style.opacity = "1";
+            this.addressData.innerHTML = document.querySelector("#stationName");
+            console.log(this.addressData)
+            console.log(document.querySelector("#stationName"))
         }
     }
 
