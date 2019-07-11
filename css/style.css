@@ -221,6 +221,12 @@ input,
   box-shadow: 0.5em 0.3em 0.8em rgba(52, 41, 34, 1);
 }
 
+#data > p {
+  color: #342922;
+  font-size: 20px;
+  display: none;
+}
+
 footer {
   margin-bottom: 1em;
 }
