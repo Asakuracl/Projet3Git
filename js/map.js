@@ -24,6 +24,11 @@ class leafMap {
                 document.querySelector("#stationStand").innerHTML = station.bike_stands;
                 document.querySelector("#stationBikes").innerHTML = station.available_bikes;
 
+                //storage
+                this.nameStorage = localStorage.setItem("nom", station.name);
+
+                this.addressStorage = localStorage.setItem("address", station.address);
+
                 //show name & button only on available bikes, when click on markers
                 this.hidden = document.querySelector("#formulInput");
                 this.btHidden = document.querySelector("#formulBouton");
