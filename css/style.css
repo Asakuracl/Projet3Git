@@ -189,7 +189,7 @@ input,
 
 #canvasHead {
   position: relative;
-  bottom: 503px;
+  bottom: 526px;
   left: 615px;
   border: solid 0.2em #342922;
   border-radius: 1em;
@@ -221,10 +221,11 @@ input,
   box-shadow: 0.5em 0.3em 0.8em rgba(52, 41, 34, 1);
 }
 
-#data > p {
+#textData {
   color: #342922;
   font-size: 20px;
   opacity: 0;
+  text-align: center;
 }
 
 footer {
