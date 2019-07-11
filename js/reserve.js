@@ -80,9 +80,9 @@ class reservation {
     }
 
     valid() {
-        this.textData.style.display = "block";
-        this.canvas.style.display = "none";
-        this.btCanvas.style.display = "none";
+        this.textData.style.opacity = "1";
+        this.canvas.style.opacity = "0";
+        this.btCanvas.style.opacity = "0";
         this.nomData.innerHTML = localStorage.getItem("nom");
         this.addressData.innerHTML = localStorage.getItem("address");
         this.nomValue.innerHTML = localStorage.getItem("nomValue");
