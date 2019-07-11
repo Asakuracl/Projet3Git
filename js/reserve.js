@@ -17,14 +17,6 @@ class reservation {
 
         this.helpId = document.getElementById("helpId");
 
-        /*
-                this.signature = new SignaturePad(this.canvas);
-        
-                //this.signature.backgroundColor = "rgb(255,255,255)";
-                this.signature.minWidth = 1;
-                this.signature.maxWidth = 4;
-                this.signature.penColor = "rgb(204, 159, 24)";
-        */
         this.canvas = document.querySelector("#canvas");
 
         this.signature = new SignaturePad(this.canvas, {
@@ -39,6 +31,12 @@ class reservation {
         //
         this.addressData = document.querySelector("#addressData");
 
+        this.nomData = document.querySelector("#nomData");
+
+        this.nomValue = document.querySelector("#nomValue");
+
+        this.prenomValue = document.querySelector("#prenomValue");
+
         this.btReserve.addEventListener("click", this.reserve.bind(this));
 
         this.btCanvas = document.querySelector("#boutonCanvas");
@@ -46,9 +44,11 @@ class reservation {
         this.btValid = document.querySelector("#btValid");
         this.btReset = document.querySelector("#btReset");
 
-        this.btReset.addEventListener("click", this.clear.bind(this))
+        this.btReset.addEventListener("click", this.clear.bind(this));
 
-        this.btValid.addEventListener("click", this.empty.bind(this))
+        this.btValid.addEventListener("click", this.empty.bind(this));
+
+        this.btValid.addEventListener("click", this.valid.bind(this));
 
     }
 
@@ -58,16 +58,13 @@ class reservation {
         } else if ((!this.regexId.test(this.nom.value)) || (!this.regexId.test(this.prenom.value))) {
             this.helpId.innerHTML = "Id invalide !"
         } else {
-            //localStorage.setItem("Nom", this.nom.value);
-            //localStorage.setItem("Pnom", this.pnom.value);
             this.helpId.innerHTML = "";
             this.btReserve.style.opacity = "0";
             this.formul.style.opacity = "0";
             this.formul.style.zIndex = "-1";
             this.canvasHead.style.opacity = "1";
-            this.addressData.innerHTML = document.querySelector("#stationName");
-            console.log(this.addressData)
-            console.log(document.querySelector("#stationName"))
+            this.nameValueStorage = localStorage.setItem("nomValue", this.nom.value);
+            localStorage.setItem("prenomValue", this.prenom.value);
         }
     }
 
@@ -79,6 +76,15 @@ class reservation {
         if (this.signature.isEmpty()) {
             alert("Merci de signer s'il vous plait.")
         }
+    }
+
+    valid() {
+        this.canvasHead.style.opacity = "0";
+        this.nomData.innerHTML = localStorage.getItem("nom");
+        this.addressData.innerHTML = localStorage.getItem("address");
+        this.nomValue.innerHTML = localStorage.getItem("nomValue");
+        this.prenomValue.innerHTML = localStorage.getItem("prenomValue");
+
     }
 
 }
