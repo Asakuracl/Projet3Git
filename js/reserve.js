@@ -31,6 +31,7 @@ class reservation {
         //
         this.addressData = document.querySelector("#addressData");
 
+        this.textData = document.querySelector("#textData");
         this.nomData = document.querySelector("#nomData");
 
         this.nomValue = document.querySelector("#nomValue");
@@ -79,7 +80,9 @@ class reservation {
     }
 
     valid() {
-        this.canvasHead.style.opacity = "0";
+        this.textData.style.display = "block";
+        this.canvas.style.display = "none";
+        this.btCanvas.style.display = "none";
         this.nomData.innerHTML = localStorage.getItem("nom");
         this.addressData.innerHTML = localStorage.getItem("address");
         this.nomValue.innerHTML = localStorage.getItem("nomValue");
