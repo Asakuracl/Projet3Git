@@ -2,32 +2,38 @@
 class countdown {
     constructor(btValid, minNow) {
         this.btValid = btValid;
-        this.minNow = minNow;
         this.tempsData = document.querySelector("#tempsData");
+
+        this.addMin = 20;
+
+        this.countDownDate = new Date().getTime() + this.addMin * 60000;
+
         this.btValid.addEventListener("click", this.start.bind(this));
 
     }
 
+    timer() {
+        this.countDown = this.countDownDate
+
+        this.now = new Date().getTime();
+
+        this.distance = this.countDown - this.now;
+        console.log(this.distance)
+
+        this.minutes = Math.floor((this.distance % (1000 * 60 * 60)) / (1000 * 60));
+        console.log(this.minutes)
+
+        this.seconds = Math.floor((this.distance % (1000 * 60)) / 1000);
+        console.log(this.seconds)
+
+        this.tempsData.innerHTML = this.minutes + "m" + this.seconds + "s";
+    }
+
     start() {
-        this.x = setInterval(function () {
-            this.now = new Date().getMinutes() + 20;
-            this.nowTest = new Date().getMinutes()
-
-            //this.distance = this.minNow - this.now;
-            this.distance = this.now - this.nowTest;
-            console.log(this.distance)
-
-            this.minutes = Math.floor((this.distance % (1000 * 60 * 60)) / (1000 * 60));
-            console.log(this.minutes)
-            this.seconds = Math.floor((this.distance % (1000 * 60)) / (1000));
-            console.log(this.seconds)
-            this.tempsData.innerHTML = this.minutes + "m" + this.seconds + "s";
-        }, 1000);
+        this.count = setInterval(this.timer.bind(this), 1000);
     }
 }
 
 const btValid = document.querySelector("#btValid");
-const minNow = new Date().getMinutes();
 
-
-const timer = new countdown(btValid, minNow);
+const timer = new countdown(btValid);
