@@ -1,6 +1,6 @@
 // timer
 class countdown {
-    constructor(btValid, minNow) {
+    constructor(btValid) {
         this.btValid = btValid;
         this.tempsData = document.querySelector("#tempsData");
 
@@ -27,6 +27,7 @@ class countdown {
         console.log(this.seconds)
 
         this.tempsData.innerHTML = this.minutes + "m" + this.seconds + "s";
+        // ajouter un if si inf à 0
     }
 
     start() {
