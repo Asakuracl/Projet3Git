@@ -236,13 +236,72 @@ footer {
 }
 
 /*Media */
-@media screen and (max-width: 540px) {
+
+/*Tablette*/
+@media screen and (max-width: 960px) {
   #container {
     width: auto;
   }
 
   #logo {
     width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  #slideImage {
+    width: 100%;
+  }
+
+  #sectionDeux {
+    width: auto;
+    flex-direction: column;
+  }
+
+  #mapVelo {
+    width: auto;
+    margin-left: 0px;
+  }
+
+  #formul {
+    width: auto;
+    margin: 20px 0 0 0;
+  }
+
+  #Nom,
+  #Prenom {
+    width: 60%;
+    height: 16px;
+  }
+
+  #formulBouton {
+    position: relative;
+    top: -3em;
+    left: 0em;
+    width: 50%;
+    margin: auto;
+  }
+
+  #canvasHead {
+    position: relative;
+    bottom: 438px;
+    left: 0px;
+    width: auto;
+  }
+}
+
+/*Phone*/
+@media screen and (max-width: 540px) {
+  #container {
+    width: auto;
+  }
+
+  #logo {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 
   #slideImage {
@@ -273,18 +332,15 @@ footer {
   #formulBouton {
     position: relative;
     top: -3em;
-    left: 1em;
+    left: 0em;
     width: 93%;
+    margin: auto;
   }
 
   #canvasHead {
     position: relative;
-    bottom: 525px;
+    bottom: 438px;
     left: 0px;
     width: auto;
-  }
-
-  #textData {
-    padding-top: 10px;
   }
 }
