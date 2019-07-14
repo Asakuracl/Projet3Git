@@ -4,7 +4,7 @@ class countdown {
         this.btValid = btValid;
         this.tempsData = document.querySelector("#tempsData");
 
-        this.addMin = 0.2;
+        this.addMin = 20;
 
         //this.count = null;
 
@@ -21,6 +21,7 @@ class countdown {
 
         this.distance = this.countDown - this.now;
 
+
         this.minutes = Math.floor((this.distance % (1000 * 60 * 60)) / (1000 * 60));
 
 
@@ -28,11 +29,14 @@ class countdown {
 
         this.tempsData.innerHTML = this.minutes + "m" + this.seconds + "s";
 
+        sessionStorage.setItem("timer", this.distance);
+
         if (this.distance < 0) {
             clearInterval(this.count);
             this.tempsData.innerHTML = "écoulé !"
         }
 
+        //add a if on sessionstorage timer check p3
     }
 
     start() {
