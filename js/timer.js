@@ -4,7 +4,9 @@ class countdown {
         this.btValid = btValid;
         this.tempsData = document.querySelector("#tempsData");
 
-        this.addMin = 20;
+        this.addMin = 0.2;
+
+        //this.count = null;
 
         this.countDownDate = new Date().getTime() + this.addMin * 60000;
 
@@ -18,16 +20,19 @@ class countdown {
         this.now = new Date().getTime();
 
         this.distance = this.countDown - this.now;
-        console.log(this.distance)
 
         this.minutes = Math.floor((this.distance % (1000 * 60 * 60)) / (1000 * 60));
-        console.log(this.minutes)
+
 
         this.seconds = Math.floor((this.distance % (1000 * 60)) / 1000);
-        console.log(this.seconds)
 
         this.tempsData.innerHTML = this.minutes + "m" + this.seconds + "s";
-        // ajouter un if si inf à 0
+
+        if (this.distance < 0) {
+            clearInterval(this.count);
+            this.tempsData.innerHTML = "écoulé !"
+        }
+
     }
 
     start() {
