@@ -232,3 +232,28 @@ input,
 footer {
   margin-bottom: 1em;
 }
+
+@media screen and (max-width: 540px) {
+  #container {
+    width: auto;
+  }
+
+  #slideImage {
+    width: auto;
+  }
+
+  #sectionDeux {
+    width: auto;
+    flex-direction: column;
+  }
+
+  #mapVelo {
+    width: auto;
+    margin-left: 0px;
+  }
+
+  #formul {
+    width: auto;
+    margin: 20px 0 0 0;
+  }
+}
