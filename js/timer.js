@@ -11,6 +11,10 @@ class countdown {
 
         this.countDownDate = new Date().getTime() + this.addMin * 60000;
 
+        //
+        this.test = sessionStorage.setItem("newtest", this.countDownDate);
+        //
+
         this.btValid.addEventListener("click", this.start.bind(this));
 
         this.timerOn();
@@ -44,8 +48,10 @@ class countdown {
             heure: this.minutes + "m" + this.seconds + "s"
         };
 
+        /*
         setInterval(getCount, 1000);
         console.log(getCount.heure)
+        */
 
         let getCount_json = JSON.stringify(getCount);
         sessionStorage.setItem("objet", getCount_json);
@@ -60,15 +66,13 @@ class countdown {
         console.log(getCount);
 
 
-        /*
-                if (sessionStorage.getItem("getTimer") > 0) {
-        
-                    this.textData.style.opacity = "1";
-        
-                    this.tempsData.innerHTML = getCounts.heure;
-        
-                }
-        */
+        if (sessionStorage.getItem("getTimer") > 0) {
+            setInterval(function () {
+                console.log(getCount)
+            }, 1000)
+            //console.log(sessionStorage.getItem("newtest"))
+        }
+
     }
 
     start() {
