@@ -39,6 +39,7 @@ class countdown {
         this.tempsData.innerHTML = this.minutes + "m" + this.seconds + "s";
 
         this.getTimer = sessionStorage.setItem("getTimer", this.distance);
+
         /*
         this.saveTimer = sessionStorage.setItem("saveTimer", this.countDownDate);
         */
@@ -47,6 +48,7 @@ class countdown {
             clearInterval(this.count);
             this.tempsData.innerHTML = "écoulé !"
         }
+
 
         let getCount = {
             heure: this.minutes + "m" + this.seconds + "s"
@@ -57,8 +59,6 @@ class countdown {
         sessionStorage.setItem("objet", getCount_json);
 
     }
-
-    //add a if on sessionstorage timer check p3
 
     timerOn() {
         let getCount_json = sessionStorage.getItem("objet");
@@ -85,7 +85,7 @@ class countdown {
             this.countDownDate = new Date().getTime() + parseInt(distance, 10);
 
             /*
-                        this.countDownDate = sessionStorage.getItem("saveTimer");
+            this.countDownDate = sessionStorage.getItem("saveTimer");
             */
             this.start();
 
