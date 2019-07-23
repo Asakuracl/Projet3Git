@@ -4,14 +4,20 @@ class countdown {
         this.btValid = btValid;
         this.tempsData = document.querySelector("#tempsData");
 
-        //
         this.textData = document.querySelector("#textData");
-        //
+
+        this.addressData = document.querySelector("#addressData");
+
+        this.textData = document.querySelector("#textData");
+        this.nomData = document.querySelector("#nomData");
+
+        this.nomValue = document.querySelector("#nomValue");
+
+        this.prenomValue = document.querySelector("#prenomValue");
+
         this.addMin = 20;
 
         this.countDownDate = new Date().getTime() + this.addMin * 60000;
-
-        console.log(this.countDownDate)
 
         this.btValid.addEventListener("click", this.start.bind(this));
 
@@ -34,11 +40,9 @@ class countdown {
 
         this.getTimer = sessionStorage.setItem("getTimer", this.distance);
         //
-        this.test = sessionStorage.setItem("test", this.countDownDate);
-
-
-
+        this.saveTimer = sessionStorage.setItem("saveTimer", this.countDownDate);
         //
+
         if (this.distance < 0) {
             clearInterval(this.count);
             this.tempsData.innerHTML = "écoulé !"
@@ -69,6 +73,11 @@ class countdown {
         if (sessionStorage.getItem("getTimer") > 0) {
 
             this.textData.style.opacity = "1";
+            this.nomData.innerHTML = localStorage.getItem("nom");
+            this.addressData.innerHTML = localStorage.getItem("address");
+            this.nomValue.innerHTML = localStorage.getItem("nomValue");
+            this.prenomValue.innerHTML = localStorage.getItem("prenomValue");
+
             /*
                         this.tempsData.innerHTML = getCount.heure;
                         console.log(getCount.heure);
@@ -77,7 +86,7 @@ class countdown {
                         this.countDownDate = new Date().getTime() + parseInt(distance, 10);
             */
 
-            this.countDownDate = sessionStorage.getItem("test");
+            this.countDownDate = sessionStorage.getItem("saveTimer");
 
             this.start();
 
