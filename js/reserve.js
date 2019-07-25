@@ -54,11 +54,14 @@ class reservation {
     }
 
     reserve() {
+
+
         if ((this.nom.validity.valueMissing) || (this.prenom.validity.valueMissing)) {
             this.helpId.innerHTML = "Id manquant !"
         } else if ((!this.regexId.test(this.nom.value)) || (!this.regexId.test(this.prenom.value))) {
             this.helpId.innerHTML = "Id invalide !"
         } else {
+            //this.textData.style.opacity = "0";
             this.helpId.innerHTML = "";
             this.btReserve.style.opacity = "0";
             this.formul.style.opacity = "0";
@@ -74,19 +77,22 @@ class reservation {
     }
 
     empty() {
-        if (this.signature.isEmpty()) {
-            alert("Merci de signer s'il vous plait.")
-        }
+
     }
 
     valid() {
-        this.textData.style.opacity = "1";
-        this.canvas.style.opacity = "0";
-        this.btCanvas.style.opacity = "0";
-        this.nomData.innerHTML = localStorage.getItem("nom");
-        this.addressData.innerHTML = localStorage.getItem("address");
-        this.nomValue.innerHTML = localStorage.getItem("nomValue");
-        this.prenomValue.innerHTML = localStorage.getItem("prenomValue");
+        if (this.signature.isEmpty()) {
+            alert("Merci de signer s'il vous plait.")
+
+        } else {
+            this.textData.style.opacity = "1";
+            this.canvas.style.opacity = "0";
+            this.btCanvas.style.opacity = "0";
+            this.nomData.innerHTML = localStorage.getItem("nom");
+            this.addressData.innerHTML = localStorage.getItem("address");
+            this.nomValue.innerHTML = localStorage.getItem("nomValue");
+            this.prenomValue.innerHTML = localStorage.getItem("prenomValue");
+        }
 
     }
 
