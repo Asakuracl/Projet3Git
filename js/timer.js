@@ -19,9 +19,11 @@ class countdown {
 
         this.prenomValue = document.querySelector("#prenomValue");
 
+        //minute configuration
         this.addMin = 20;
 
-        this.countDownDate = new Date().getTime() + this.addMin * 60000;
+        //add the time with +20min
+        this.countdownTimer = new Date().getTime() + this.addMin * 60000;
 
         this.btValid.addEventListener("click", this.start.bind(this));
 
@@ -33,7 +35,7 @@ class countdown {
 
         this.now = new Date().getTime();
 
-        this.distance = this.countDownDate - this.now;
+        this.distance = this.countdownTimer - this.now;
 
         this.minutes = Math.floor((this.distance % (1000 * 60 * 60)) / (1000 * 60));
 
@@ -42,9 +44,9 @@ class countdown {
 
         this.tempsData.innerHTML = this.minutes + "m" + this.seconds + "s";
 
-        this.getTimer = sessionStorage.setItem("getTimer", this.distance);
+        this.timerDistance = sessionStorage.setItem("timerDistance", this.distance);
 
-        this.saveTimer = sessionStorage.setItem("saveTimer", this.countDownDate);
+        this.saveTimer = sessionStorage.setItem("saveTimer", this.countdownTimer);
 
 
         if (this.distance < 0) {
@@ -54,14 +56,12 @@ class countdown {
 
     }
 
-    //add a if on sessionstorage timer check p3
-
     timerOn() {
-
-        //sessionStorage.removeItem("getTimer");
+        //to clear to sessionstorage, remove below
+        //sessionStorage.removeItem("timerDistance");
         //sessionStorage.clear()
 
-        if (sessionStorage.getItem("getTimer") > 0) {
+        if (sessionStorage.getItem("timerDistance") > 0) {
 
             this.textData.style.opacity = "1";
             this.nomData.innerHTML = localStorage.getItem("nom");
@@ -69,7 +69,7 @@ class countdown {
             this.nomValue.innerHTML = localStorage.getItem("nomValue");
             this.prenomValue.innerHTML = localStorage.getItem("prenomValue");
 
-            this.countDownDate = sessionStorage.getItem("saveTimer");
+            this.countdownTimer = sessionStorage.getItem("saveTimer");
 
             this.start();
 
@@ -79,11 +79,9 @@ class countdown {
     //add clean on reserved
     clean() {
 
-        //sessionStorage.removeItem("getTimer");
+        //sessionStorage.removeItem("timerDistance");
         sessionStorage.clear()
-
         //clearInterval(this.count);
-
     }
 
 
