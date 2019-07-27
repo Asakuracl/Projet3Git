@@ -6,6 +6,10 @@ class countdown {
 
         this.textData = document.querySelector("#textData");
 
+        this.btReserve = document.querySelector("#formulBouton");
+
+        this.btReserve.addEventListener("click", this.clean.bind(this));
+
         this.addressData = document.querySelector("#addressData");
 
         this.textData = document.querySelector("#textData");
@@ -54,9 +58,8 @@ class countdown {
 
     timerOn() {
 
-        //sessionStorage.removeItem("objet");
         //sessionStorage.removeItem("getTimer");
-
+        //sessionStorage.clear()
 
         if (sessionStorage.getItem("getTimer") > 0) {
 
@@ -71,13 +74,21 @@ class countdown {
             this.start();
 
         }
+    }
 
-        //add clean on marker
+    //add clean on reserved
+    clean() {
+
+        //sessionStorage.removeItem("getTimer");
+        sessionStorage.clear()
+
+        //clearInterval(this.count);
 
     }
 
+
     start() {
-        setInterval(this.timer.bind(this), 1000);
+        this.count = setInterval(this.timer.bind(this), 1000);
     }
 
 }
