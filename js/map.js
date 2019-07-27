@@ -15,7 +15,7 @@ class leafMap {
         for (let station of this.stations) {
             this.markers = L.marker([station.position.lat, station.position.lng]).addTo(map);
 
-            //on markers click add station information
+            //on markers click, add station information
             this.markers.addEventListener("click", function () {
 
                 document.querySelector("#stationName").innerHTML = station.name;
@@ -24,7 +24,7 @@ class leafMap {
                 document.querySelector("#stationStand").innerHTML = station.bike_stands;
                 document.querySelector("#stationBikes").innerHTML = station.available_bikes;
 
-                //storage
+                //localstorage information
                 this.nameStorage = localStorage.setItem("nom", station.name);
 
                 this.addressStorage = localStorage.setItem("address", station.address);
@@ -70,7 +70,7 @@ class leafMap {
 
 }
 
-
+// add the map on a variable
 const map = L.map("mapVelo").setView([43.6, 1.43], 14);
 L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.fr/open-data/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
