@@ -7,6 +7,8 @@ class reservation {
         this.bike = document.querySelector("#stationBikes");
         this.formul = document.querySelector("#formul");
         this.formulBt = document.querySelector("#formulBouton");
+
+        //add regular expression
         this.regexId = /.+\w/;
 
         this.input = document.querySelector("#formulInput");
@@ -19,6 +21,7 @@ class reservation {
 
         this.canvas = document.querySelector("#canvas");
 
+        // add signature pad API
         this.signature = new SignaturePad(this.canvas, {
             minWidth: 1,
             maxWidth: 1,
@@ -28,7 +31,6 @@ class reservation {
 
         this.canvasHead = document.querySelector("#canvasHead");
 
-        //
         this.addressData = document.querySelector("#addressData");
 
         this.textData = document.querySelector("#textData");
@@ -54,7 +56,6 @@ class reservation {
     }
 
     reserve() {
-
 
         if ((this.nom.validity.valueMissing) || (this.prenom.validity.valueMissing)) {
             this.helpId.innerHTML = "Id manquant !"
@@ -97,7 +98,6 @@ class reservation {
     }
 
 }
-
 
 const btReserve = document.querySelector("#formulBouton");
 
