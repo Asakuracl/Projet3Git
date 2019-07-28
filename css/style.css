@@ -250,6 +250,10 @@ footer {
   background-color: #342922;
 }
 
+#footerLogo {
+  width: 20%;
+}
+
 /*Media */
 
 /*Tablette*/
