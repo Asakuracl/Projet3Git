@@ -68,7 +68,7 @@ class reservation {
             this.formul.style.opacity = "0";
             this.formul.style.zIndex = "-1";
             this.canvasHead.style.opacity = "1";
-            this.nameValueStorage = localStorage.setItem("nomValue", this.nom.value);
+            localStorage.setItem("nomValue", this.nom.value);
             localStorage.setItem("prenomValue", this.prenom.value);
         }
     }
