@@ -4,10 +4,6 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-  <!-- pour ajouter bootstrap
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
--->
 
   <link rel="stylesheet" href="css/style.css" />
 
@@ -24,29 +20,25 @@
 
 <body>
   <div id="container">
-
     <header>
       <img src="image/BikelocationT.png" id="logo" alt="logo" />
     </header>
-
     <!-- section un -->
     <section id="sectionUn">
       <div id="slideImage">
-
         <div id="buttonContainer">
           <button id="leftArrow" class="jqButton">
             <i class="fas fa-angle-left "></i>
           </button>
-
           <button id="buttonPaus">
             <i class="fas fa-pause"></i>
           </button>
-
           <button id="rightArrow" class="jqButton">
             <i class="fas fa-angle-right"></i>
           </button>
         </div>
 
+        <!-- work on it -->
         <ul id="containerSlideImg">
           <li class="slideImg"> <img src="image/slide/sD1.jpg" alt="vélo" /></li>
           <!--srcset="image/slider/sD1_640.jpg 640w,
@@ -57,19 +49,16 @@
         </ul>
 
       </div>
-
       <div id="slideDescription">
         <h1><strong>BIKE LOCATION</strong> : LOCATION DE VÉLO !</h1>
         <p> Vous souhaitez un moyen de transport écologique ? La BikeLocation vous aide dans vos déplacements !</p>
       </div>
-
     </section>
 
     <!-- section deux-->
     <section id="sectionDeux">
       <div id="mapVelo">
       </div>
-
       <form id="formul">
         <fieldset>
           <div id="textFieldset">
@@ -87,24 +76,20 @@
               <span id="stationBikes"></span>
             </p>
           </div>
-
           <div id="formulInput">
             <p id="formulNom">
               <label for="Nom"> Nom :
               </label><br>
               <input type="text" name="Nom" id="Nom" required>
             </p>
-
             <p id="formulPrenom">
               <label for="Prenom"> Prénom :</label><br>
               <input type="text" name="Prenom" id="Prenom" required>
             </p>
-
             <p id="helpId">
               <span></span>
             </p>
           </div>
-
         </fieldset>
       </form>
       <button id="formulBouton">Réserver
@@ -115,17 +100,13 @@
     <section id="canvasHead">
       <h3>Votre signature pour valider s'il vous plait</h3>
       <canvas id=canvas height="150" width="300">
-        <!--Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.-->
       </canvas>
-
       <div id="boutonCanvas">
         <button id="btValid" class="btCanvasCss">Valider
         </button>
-
         <button id="btReset" class="btCanvasCss">Annuler
         </button>
       </div>
-
     </section>
 
     <!-- Div Donnée de reservation -->
@@ -140,12 +121,30 @@
       </p>
     </div>
 
+    <!-- footer -->
     <footer>
-
+      <img src="image/BikelocationT.png" id="footerLogo" alt="logo" />
+      <div id="adressContact">
+        <h3>
+          <i class="fas fa-map-marked-alt"></i> Adresse :
+        </h3>
+        <p>1 rue du paradis </p>
+      </div>
+      <div id="moyenContact">
+        <h3>Nous contacter : </h3>
+        <p>
+          <i class="fas fa-mobile-alt"></i> Portable : 01 02 03 04 05
+        </p>
+        <p>
+          <i class="fas fa-at"></i>
+          Mail : BikeLocation@paradis.com
+        </p>
+      </div>
     </footer>
 
   </div>
 
+  <!-- script -->
   <script async src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
