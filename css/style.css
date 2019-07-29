@@ -39,7 +39,6 @@ p {
 #containerSlideImg {
   display: flex;
   padding-left: 0px;
-  list-style: none;
   /*overflow: hidden;*/
 }
 
@@ -47,6 +46,15 @@ p {
   /*border: solid 0.2em whitesmoke;*/
   /*border-radius: 0.3em;*/
   height: 380px;
+}
+
+.textModeEmploi {
+  position: relative;
+  bottom: 13em;
+  right: 1em;
+  font-size: 30px;
+  text-align: end;
+  font-weight: bold;
 }
 
 #buttonContainer {
