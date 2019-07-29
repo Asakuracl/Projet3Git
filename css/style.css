@@ -36,6 +36,19 @@ p {
   height: 377px;
 }
 
+#containerSlideImg {
+  display: flex;
+  padding-left: 0px;
+  list-style: none;
+  /*overflow: hidden;*/
+}
+
+.slideImg {
+  /*border: solid 0.2em whitesmoke;*/
+  /*border-radius: 0.3em;*/
+  height: 380px;
+}
+
 #buttonContainer {
   display: flex;
   justify-content: center;
@@ -79,19 +92,6 @@ p {
 
 #slideDescription {
   margin: 2em 0 2em 0;
-}
-
-#containerSlideImg {
-  display: flex;
-  padding-left: 0px;
-  list-style: none;
-  /*overflow: hidden;*/
-}
-
-.slideImg {
-  /*border: solid 0.2em whitesmoke;*/
-  /*border-radius: 0.3em;*/
-  height: 380px;
 }
 
 /* section deux */
