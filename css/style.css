@@ -40,7 +40,7 @@ p {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 20em;
+  bottom: 4em;
 }
 
 #leftArrow {
@@ -92,7 +92,6 @@ p {
   /*border: solid 0.2em whitesmoke;*/
   /*border-radius: 0.3em;*/
   height: 380px;
-  margin-top: -4.1em;
 }
 
 /* section deux */
