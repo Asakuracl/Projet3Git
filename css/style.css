@@ -38,7 +38,7 @@ p {
 
 #containerSlideImg {
   display: flex;
-  transition: margin-left 2s ease;
+  transition: margin-left 1s cubic-bezier(.2,1.02,.63,.68);
   /*overflow: hidden;*/
 }
 
