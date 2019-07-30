@@ -5,7 +5,7 @@ class sliderShow {
         this.images = images;
         this.container = container;
         this.variable = 0;
-        this.dist = -900;
+        this.dist = -100.3;
         this.temps = 5000;
         this.interv = null;
         this.demarre = false;
@@ -26,35 +26,21 @@ class sliderShow {
 
     }
 
-    // Change auto images
-    sliderAuto() {
-
-        if (this.variable > this.images.length - 1) {
-            this.variable = 0;
-        }
-        this.container.style.marginLeft = (this.variable * this.dist) + "px";
-        this.variable++;
-
-    }
-
     // Change image with click on button
     buttonNext() {
-
+        this.variable++;
         if (this.variable > this.images.length - 1) {
             this.variable = 0;
         }
-        this.container.style.marginLeft = (this.variable * this.dist) + "px";
-        this.variable++;
+        this.container.style.marginLeft = -Math.abs((this.variable * this.dist)) + "%";
     }
 
     buttonPrev() {
-
+        this.variable--;
         if (this.variable < 0) {
             this.variable = this.images.length - 1;
         }
-
-        this.container.style.marginLeft = (this.variable * this.dist) + "px";
-        this.variable--;
+        this.container.style.marginLeft = -Math.abs((this.variable * this.dist)) + "%";
     }
 
     buttonStop() {
@@ -76,18 +62,17 @@ class sliderShow {
         }
     };
 
-
-    //active interval
+    //change image auto with interval 
     lancerDiap() {
-        this.interv = setInterval(this.sliderAuto.bind(this), this.temps);
+        this.interv = setInterval(this.buttonNext.bind(this), this.temps);
     }
 
 }
 
 
-const images = document.querySelectorAll("li");
+const images = document.querySelectorAll(".slideImg");
 
-let container = document.querySelector("ul");
+let container = document.querySelector("#containerSlideImg");
 
 const slider = new sliderShow(images, container);
 
