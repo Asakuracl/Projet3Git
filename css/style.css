@@ -47,6 +47,7 @@ header {
   padding-right: 1.5em;
   color: whitesmoke;
   text-decoration: none;
+  transition: 1s ease;
 }
 
 #navbar a:hover {
