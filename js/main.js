@@ -5,7 +5,7 @@ $(".jqButton").hide();
 $("#slideImage").on("mouseover", function () {
     $(".jqButton").animate({
         height: "show"
-    }, 800)
+    }, 500)
 });
 
 //anime canvas pop
