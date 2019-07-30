@@ -19,36 +19,39 @@ p {
 }
 
 /* header */
-
+header {
+}
 #logo {
   width: 20%;
-  margin-top: -0.5em;
+  margin-right: 50%;
 }
 
 /* The navigation bar */
 #navbar {
   overflow: hidden;
   position: fixed;
-  top: 0.5em;
+  top: 0.5%;
+  align-items: center;
   width: 900px;
   background: #342922;
   border: solid 0.2em #342922;
   border-radius: 0.3em;
-  height: 5%;
+  height: 4em;
   display: flex;
   justify-content: end;
   z-index: 11;
 }
 
 #navbar a {
-  text-align: center;
-  padding: 0.5em 1em 0.5em 0;
+  padding-right: 1em;
   color: whitesmoke;
   text-decoration: none;
 }
 
 #navbar a:hover {
   background-color: #cc9f18;
+  transition: background-color 1s ease-in-out;
+  padding: 1.5em 1em;
   color: #342922;
 }
 /* Section Un*/
@@ -58,13 +61,14 @@ p {
   box-shadow: 0.5em 0.5em 3em #342922;
   border: solid 0.2em #342922;
   border-radius: 0.3em;
+  margin-top: 7em;
   width: 897px;
   height: 377px;
 }
 
 #containerSlideImg {
   display: flex;
-  transition: margin-left 1s cubic-bezier(0.2, 1.02, 0.63, 0.68);
+  transition: margin-left 1.5s cubic-bezier(0.2, 1.02, 0.63, 0.68);
   /*overflow: hidden;*/
 }
 
@@ -142,6 +146,7 @@ p {
   border: solid 0.2em #342922;
   border-radius: 1em;
   margin-left: -200px;
+  z-index: 10;
 }
 
 #formul {
