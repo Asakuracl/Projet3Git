@@ -38,6 +38,7 @@ p {
 
 #containerSlideImg {
   display: flex;
+  transition: margin-left 2s ease;
   /*overflow: hidden;*/
 }
 
