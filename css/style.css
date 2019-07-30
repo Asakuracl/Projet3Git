@@ -29,23 +29,22 @@ p {
 #navbar {
   overflow: hidden;
   position: fixed;
-  top: 0;
+  top: 0.5em;
   width: 900px;
   background: #342922;
   border: solid 0.2em #342922;
   border-radius: 0.3em;
-
   height: 5%;
   display: flex;
   justify-content: end;
+  z-index: 11;
 }
 
-#navbar a{
+#navbar a {
   text-align: center;
-  padding-right: 1em;
-  color : whitesmoke;
+  padding: 0.5em 1em 0.5em 0;
+  color: whitesmoke;
   text-decoration: none;
-
 }
 
 #navbar a:hover {
@@ -65,7 +64,7 @@ p {
 
 #containerSlideImg {
   display: flex;
-  transition: margin-left 1s cubic-bezier(.2,1.02,.63,.68);
+  transition: margin-left 1s cubic-bezier(0.2, 1.02, 0.63, 0.68);
   /*overflow: hidden;*/
 }
 
