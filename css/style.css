@@ -25,6 +25,33 @@ p {
   margin-top: -0.5em;
 }
 
+/* The navigation bar */
+#navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 900px;
+  background: #342922;
+  border: solid 0.2em #342922;
+  border-radius: 0.3em;
+
+  height: 5%;
+  display: flex;
+  justify-content: end;
+}
+
+#navbar a{
+  text-align: center;
+  padding-right: 1em;
+  color : whitesmoke;
+  text-decoration: none;
+
+}
+
+#navbar a:hover {
+  background-color: #cc9f18;
+  color: #342922;
+}
 /* Section Un*/
 
 #slideImage {
