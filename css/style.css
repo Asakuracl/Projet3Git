@@ -300,15 +300,32 @@ footer {
     width: auto;
   }
 
+  #logo {
+    margin-right: 55%;
+  }
+
   #navbar {
-    width: 98%;
+    width: 97%;
   }
 
   #navbar a {
+    padding-right: 1.5em;
   }
 
   #slideImage {
-    width: 100%;
+    width: auto;
+  }
+
+  .slideImg {
+    width: auto;
+  }
+
+  .imageSD {
+    width: auto;
+  }
+
+  .textModeEmploi {
+    right: 5.5em;
   }
 
   #sectionDeux {
