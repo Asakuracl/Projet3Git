@@ -19,8 +19,6 @@ p {
 }
 
 /* header */
-header {
-}
 #logo {
   width: 15%;
   margin-right: 50%;
@@ -302,11 +300,12 @@ footer {
     width: auto;
   }
 
-  #logo {
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+  /* The navigation bar */
+  #navbar {
+    width: 98%;
+  }
+
+  #navbar a {
   }
 
   #slideImage {
@@ -351,11 +350,11 @@ footer {
 
   footer {
     width: auto;
-    margin: -17em 0 0 0;
+    margin-top: -12em;
   }
 
   #footerLogo {
-    width: 30%;
+    width: 20%;
   }
 }
 
@@ -363,13 +362,6 @@ footer {
 @media screen and (max-width: 540px) {
   #container {
     width: auto;
-  }
-
-  #logo {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
   }
 
   #slideImage {
