@@ -81,7 +81,7 @@ p {
 .textModeEmploi {
   position: relative;
   bottom: 13em;
-  right: auto;
+  right: 1em;
   font-size: 30px;
   text-align: end;
   font-weight: bold;
