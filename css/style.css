@@ -21,7 +21,7 @@ p {
 /* header */
 #logo {
   width: 15%;
-  margin-right: 50%;
+  margin-right: 60%;
 }
 
 /* The navigation bar */
@@ -81,7 +81,7 @@ p {
 .textModeEmploi {
   position: relative;
   bottom: 13em;
-  right: 1em;
+  right: auto;
   font-size: 30px;
   text-align: end;
   font-weight: bold;
@@ -300,7 +300,6 @@ footer {
     width: auto;
   }
 
-  /* The navigation bar */
   #navbar {
     width: 98%;
   }
@@ -363,7 +362,41 @@ footer {
   #container {
     width: auto;
   }
+  /* work on it */
+  #logo {
+    width: 25%;
+    margin-right: 10%;
+  }
 
+  /* The navigation bar */
+  #navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0.1%;
+    align-items: flex-start;
+    width: auto;
+    height: 14.5em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #myLinks {
+  }
+
+  #navbar a {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  #navbar a:hover {
+    transition: background-color 1s ease-in-out;
+    padding: 0.5em 20em 0.5em 0.5em;
+    color: #342922;
+  }
+
+  /* work on it */
   #slideImage {
     width: 100%;
   }
