@@ -9,11 +9,14 @@ class leafMap {
     }
 
     setMarker(reponse) {
+        this.markerClusters = L.markerClusterGroup();
 
         this.stations = JSON.parse(reponse);
 
         for (let station of this.stations) {
-            this.markers = L.marker([station.position.lat, station.position.lng]).addTo(map);
+            this.markers = L.marker([station.position.lat, station.position.lng]);
+            //this.markers.bindPopup(this.stations);
+            this.markerClusters.addLayer(this.markers);
 
             //on markers click, add station information
             this.markers.addEventListener("click", function () {
@@ -33,7 +36,6 @@ class leafMap {
                 this.hidden = document.querySelector("#formulInput");
                 this.btHidden = document.querySelector("#formulBouton");
 
-
                 if (station.available_bikes !== 0) {
                     this.hidden.style.display = "block";
                     this.btHidden.style.display = "block";
@@ -44,6 +46,7 @@ class leafMap {
                 }
             });
         }
+        map.addLayer(this.markerClusters);
     }
 
     ajaxGet(url, callback) {
