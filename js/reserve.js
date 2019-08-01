@@ -33,7 +33,7 @@ class reservation {
 
         this.addressData = document.querySelector("#addressData");
 
-        this.textData = document.querySelector("#textData");
+        this.reservationData = document.querySelector("#reservationData");
         this.nomData = document.querySelector("#nomData");
 
         this.nomValue = document.querySelector("#nomValue");
@@ -62,7 +62,7 @@ class reservation {
         } else if ((!this.regexId.test(this.nom.value)) || (!this.regexId.test(this.prenom.value))) {
             this.helpId.innerHTML = "Id invalide !"
         } else {
-            //this.textData.style.opacity = "0";
+            //this.reservationData.style.opacity = "0";
             this.helpId.innerHTML = "";
             this.btReserve.style.opacity = "0";
             this.formul.style.opacity = "0";
@@ -86,7 +86,7 @@ class reservation {
             alert("Merci de signer s'il vous plait.")
 
         } else {
-            this.textData.style.opacity = "1";
+            this.reservationData.style.opacity = "1";
             this.canvas.style.opacity = "0";
             this.btCanvas.style.opacity = "0";
             this.nomData.innerHTML = localStorage.getItem("nom");
