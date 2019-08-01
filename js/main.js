@@ -8,6 +8,32 @@ $("#slideImage").on("mouseover", function () {
     }, 500)
 });
 
+
+$("#buttonMenu").on("click", function () {
+    $("#myLinks").animate({
+        height: "toggle"
+    }, 600, "swing")
+});
+
+
+/*
+this.buttonMenu = document.querySelector("#buttonMenu");
+
+if (this.buttonMenu.addEventListener) {
+    this.buttonMenu.addEventListener("click", myFunction)
+}
+
+function myFunction() {
+    const x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+
+}
+*/
+
 //anime canvas pop
 
 /* casse le code !
