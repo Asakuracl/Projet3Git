@@ -8,8 +8,6 @@ class countdown {
 
         this.btReserve = document.querySelector("#formulBouton");
 
-        this.btReserve.addEventListener("click", this.clean.bind(this));
-
         this.addressData = document.querySelector("#addressData");
 
         this.textData = document.querySelector("#textData");
@@ -18,6 +16,10 @@ class countdown {
         this.nomValue = document.querySelector("#nomValue");
 
         this.prenomValue = document.querySelector("#prenomValue");
+
+        this.btCancelReservation = document.querySelector("#btCancelReservation");
+
+        this.btCancelReservation.addEventListener("click", this.cancel.bind(this));
 
         //minute configuration
         this.addMin = 20;
@@ -76,14 +78,13 @@ class countdown {
         }
     }
 
-    //add clean on reserved
-    clean() {
+    cancel() {
+        this.tempsData.innerHTML = "Votre réservation est annulé !";
+        this.timerDistance = sessionStorage.setItem("timerDistance", 0);
 
-        //sessionStorage.removeItem("timerDistance");
-        sessionStorage.clear()
-        //clearInterval(this.count);
+        this.saveTimer = sessionStorage.setItem("saveTimer", 0);
+        clearInterval(this.count);
     }
-
 
     start() {
         this.count = setInterval(this.timer.bind(this), 1000);
