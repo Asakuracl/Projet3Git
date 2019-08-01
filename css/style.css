@@ -267,16 +267,22 @@ input,
 }
 
 /* Div Donnée de reservation */
-
-#textData {
+#reservationData {
   position: relative;
   bottom: 400px;
   left: 0px;
+  opacity: 1;
+}
+
+#textData {
   color: #342922;
   font-size: 20px;
-  opacity: 0;
   text-align: center;
   font-weight: bold;
+}
+
+#btCancelReservation {
+  margin: auto;
 }
 
 /* footer */
