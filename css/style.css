@@ -55,7 +55,7 @@ p {
   color: #342922;
 }
 
-#menu {
+#buttonMenu {
   display: none;
 }
 /* Section Un*/
@@ -396,12 +396,13 @@ footer {
     top: 0.1%;
     align-items: flex-start;
     width: auto;
-    height: 14.5em;
+    height: auto;
     display: flex;
     flex-direction: column;
   }
 
   #myLinks {
+    display: none;
   }
 
   #navbar a {
@@ -417,18 +418,18 @@ footer {
     color: #342922;
   }
 
-  #menu {
-    display: flex;
-    justify-content: space-between;
-  }
-
   #buttonMenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
     font-size: 2.5em;
     color: #342922;
     background-color: rgba(204, 159, 24, 0.7);
     border: none;
+    border-radius: 20%;
     cursor: pointer;
-    margin: 5% 3% 3%;
+    margin: 6% 8%;
   }
 
   /* work on it */
