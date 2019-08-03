@@ -1,11 +1,11 @@
 //Slider
 
 class sliderShow {
-    constructor(images, container) {
-        this.images = images;
+    constructor(container, images) {
         this.container = container;
+        this.images = image;
         this.variable = 0;
-        this.dist = -100.3;
+        this.dist = -100;
         this.temps = 5000;
         this.interv = null;
         this.demarre = false;
@@ -32,7 +32,10 @@ class sliderShow {
         if (this.variable > this.images.length - 1) {
             this.variable = 0;
         }
-        this.container.style.marginLeft = -Math.abs((this.variable * this.dist)) + "%";
+        for (let x of this.container) {
+            x.style.marginLeft = -Math.abs((this.variable * this.dist)) + "%";
+        }
+
     }
 
     buttonPrev() {
@@ -70,11 +73,11 @@ class sliderShow {
 }
 
 
-const images = document.querySelectorAll(".slideImg");
+const container = document.querySelectorAll(".slideImg");
 
-const image = document.querySelector(".image");
+const images = document.querySelectorAll(".imageSD");
 
-const slider = new sliderShow(images, container);
+const slider = new sliderShow(container, images);
 
 
 //to start the auto slide, remove the comment below
