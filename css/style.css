@@ -60,7 +60,7 @@ p {
 }
 /* Section Un*/
 
-#slideImage {
+#containerSlideshow {
   overflow: hidden;
   box-shadow: 0.5em 0.5em 3em #342922;
   border: solid 0.2em #342922;
@@ -327,10 +327,11 @@ footer {
     padding-right: 1.5em;
   }
 
-  #slideImage {
+  #containerSlideshow {
     width: auto;
   }
 
+  /*
   .slideImg {
     width: auto;
   }
@@ -338,7 +339,7 @@ footer {
   .imageSD {
     width: auto;
   }
-
+*/
   .textModeEmploi {
     right: 5.5em;
   }
@@ -443,9 +444,17 @@ footer {
     margin: 6% 8%;
   }
 
-  #slideImage {
+  /*
+  #containerSlideshow {
     width: 100%;
   }
+
+  
+  .imageSD {
+    width: auto;
+    height: auto;
+  }
+*/
 
   #sectionDeux {
     width: auto;
