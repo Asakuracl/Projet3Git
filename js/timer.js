@@ -6,11 +6,8 @@ class countdown {
 
         this.textData = document.querySelector("#textData");
 
-        this.btReserve = document.querySelector("#formulBouton");
-
         this.addressData = document.querySelector("#addressData");
 
-        this.textData = document.querySelector("#textData");
         this.nomData = document.querySelector("#nomData");
 
         this.nomValue = document.querySelector("#nomValue");
@@ -19,28 +16,26 @@ class countdown {
 
         this.btCancelReservation = document.querySelector("#btCancelReservation");
 
+        this.formulBouton = document.querySelector("#formulBouton");
+
+        this.formulBouton.addEventListener("click", this.cancel.bind(this));
+
         this.btCancelReservation.addEventListener("click", this.cancel.bind(this));
 
         //minute configuration
         this.addMin = 20;
 
-        //add the time with +20min
-        this.countdownTimer = new Date().getTime() + this.addMin * 60000;
-
         this.btValid.addEventListener("click", this.start.bind(this));
 
         this.timerOn();
-
     }
 
     timer() {
-
         this.now = new Date().getTime();
 
         this.distance = this.countdownTimer - this.now;
 
         this.minutes = Math.floor((this.distance % (1000 * 60 * 60)) / (1000 * 60));
-
 
         this.seconds = Math.floor((this.distance % (1000 * 60)) / 1000);
 
@@ -50,46 +45,41 @@ class countdown {
 
         this.saveTimer = sessionStorage.setItem("saveTimer", this.countdownTimer);
 
-
         if (this.distance < 0) {
             clearInterval(this.count);
+            sessionStorage.clear();
             this.tempsData.innerHTML = "écoulé !"
         }
-
     }
 
     timerOn() {
-        //to clear to sessionstorage, remove below
-        //sessionStorage.removeItem("timerDistance");
-        //sessionStorage.clear()
-
         if (sessionStorage.getItem("timerDistance") > 0) {
-
             this.textData.style.opacity = "1";
             this.nomData.innerHTML = localStorage.getItem("nom");
             this.addressData.innerHTML = localStorage.getItem("address");
             this.nomValue.innerHTML = localStorage.getItem("nomValue");
             this.prenomValue.innerHTML = localStorage.getItem("prenomValue");
-
-            this.countdownTimer = sessionStorage.getItem("saveTimer");
-
             this.start();
-
         }
     }
 
     cancel() {
-        this.tempsData.innerHTML = "Votre réservation est annulé !";
-        this.timerDistance = sessionStorage.setItem("timerDistance", 0);
-
-        this.saveTimer = sessionStorage.setItem("saveTimer", 0);
+        //to clear the sessionstorage
         clearInterval(this.count);
+        sessionStorage.clear();
+        this.tempsData.innerHTML = "Votre réservation est annulé !";
     }
 
     start() {
+        //add the time with +20min
+        this.countdownTimer = new Date().getTime() + Math.floor(this.addMin * 60000);
+
+        //get savetimer on refresh
+        if (sessionStorage.getItem("timerDistance") > 0) {
+            this.countdownTimer = sessionStorage.getItem("saveTimer");
+        }
         this.count = setInterval(this.timer.bind(this), 1000);
     }
-
 }
 
 const btValid = document.querySelector("#btValid");
