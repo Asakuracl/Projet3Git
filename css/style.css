@@ -78,7 +78,7 @@ p {
   height: 380px;
 }
 
-.imageSD {
+.slideImage {
   transition: margin-left 1.5s cubic-bezier(0.2, 1.02, 0.63, 0.68);
 }
 
@@ -336,7 +336,7 @@ footer {
     width: auto;
   }
 
-  .imageSD {
+  .slideImage {
     width: auto;
   }
 */
@@ -450,7 +450,7 @@ footer {
   }
 
   
-  .imageSD {
+  .slideImage {
     width: auto;
     height: auto;
   }
