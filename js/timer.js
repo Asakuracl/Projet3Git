@@ -4,7 +4,7 @@ class countdown {
         this.btValid = btValid;
         this.tempsData = document.querySelector("#tempsData");
 
-        this.textData = document.querySelector("#textData");
+        this.reservationData = document.querySelector("#reservationData");
 
         this.addressData = document.querySelector("#addressData");
 
@@ -54,7 +54,7 @@ class countdown {
 
     timerOn() {
         if (sessionStorage.getItem("timerDistance") > 0) {
-            this.textData.style.opacity = "1";
+            this.reservationData.style.opacity = "1";
             this.nomData.innerHTML = localStorage.getItem("nom");
             this.addressData.innerHTML = localStorage.getItem("address");
             this.nomValue.innerHTML = localStorage.getItem("nomValue");
