@@ -72,8 +72,7 @@ p {
 
 #containerSlideImg {
   display: flex;
-  transition: margin-left 1.5s cubic-bezier(0.2, 1.02, 0.63, 0.68);
-  /*overflow: hidden;*/
+  /* a sup overflow: hidden;*/
 }
 
 .slideImg {
@@ -83,7 +82,7 @@ p {
 }
 
 .imageSD {
-  margin-left: 0%;
+  transition: margin-left 1.5s cubic-bezier(0.2, 1.02, 0.63, 0.68);
 }
 
 .textModeEmploi {
