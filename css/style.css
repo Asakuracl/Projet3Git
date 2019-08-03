@@ -82,6 +82,10 @@ p {
   height: 380px;
 }
 
+.imageSD {
+  margin-left: 0%;
+}
+
 .textModeEmploi {
   position: relative;
   bottom: 13em;
