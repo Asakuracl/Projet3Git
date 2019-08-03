@@ -82,7 +82,7 @@ p {
   transition: margin-left 1.5s cubic-bezier(0.2, 1.02, 0.63, 0.68);
 }
 
-.textModeEmploi {
+.slideText {
   position: relative;
   bottom: 13em;
   right: 1em;
@@ -340,7 +340,7 @@ footer {
     width: auto;
   }
 */
-  .textModeEmploi {
+  .slideText {
     right: 5.5em;
   }
 
