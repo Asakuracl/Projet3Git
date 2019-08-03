@@ -3,7 +3,7 @@
 class sliderShow {
     constructor(container, images) {
         this.container = container;
-        this.images = image;
+        this.images = images;
         this.variable = 0;
         this.dist = -100;
         this.temps = 5000;
@@ -29,11 +29,11 @@ class sliderShow {
     // Change image with click on button
     buttonNext() {
         this.variable++;
-        if (this.variable > this.images.length - 1) {
+        if (this.variable > this.container.length - 1) {
             this.variable = 0;
         }
-        for (let x of this.container) {
-            x.style.marginLeft = -Math.abs((this.variable * this.dist)) + "%";
+        for (let image of this.images) {
+            image.style.marginLeft = -Math.abs((this.variable * this.dist)) + "%";
         }
 
     }
@@ -41,9 +41,11 @@ class sliderShow {
     buttonPrev() {
         this.variable--;
         if (this.variable < 0) {
-            this.variable = this.images.length - 1;
+            this.variable = this.container.length - 1;
         }
-        this.container.style.marginLeft = -Math.abs((this.variable * this.dist)) + "%";
+        for (let image of this.images) {
+            image.style.marginLeft = -Math.abs((this.variable * this.dist)) + "%";
+        }
     }
 
     buttonStop() {
