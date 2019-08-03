@@ -72,12 +72,9 @@ p {
 
 #containerSlideImg {
   display: flex;
-  /* a sup overflow: hidden;*/
 }
 
 .slideImg {
-  /*border: solid 0.2em whitesmoke;*/
-  /*border-radius: 0.3em;*/
   height: 380px;
 }
 
@@ -397,7 +394,7 @@ footer {
   #container {
     width: auto;
   }
-  /* work on it */
+
   #logo {
     width: 25%;
     margin-right: 0;
@@ -446,7 +443,6 @@ footer {
     margin: 6% 8%;
   }
 
-  /* work on it */
   #slideImage {
     width: 100%;
   }
