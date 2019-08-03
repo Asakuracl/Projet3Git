@@ -75,8 +75,6 @@ p {
 }
 
 .containerImageText {
-  width: 100%;
-  height: auto;
 }
 
 .slideImage {
@@ -445,17 +443,18 @@ footer {
     margin: 6% 8%;
   }
 
-  /*
+  /* work on it
   #containerSlideshow {
-    width: 100%;
   }
 
-  
+  #containerSlideImages {
+  }
+
   .slideImage {
-    width: auto;
+    max-width: 100%;
     height: auto;
   }
-*/
+  */
 
   #sectionDeux {
     width: auto;
