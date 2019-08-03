@@ -45,7 +45,7 @@ class sliderShow {
 
     buttonStop() {
         if (this.demarre) {
-            this.interv = setInterval(this.sliderAuto.bind(this), this.temps);
+            this.interv = setInterval(this.buttonNext.bind(this), this.temps);
 
         } else {
             clearInterval(this.interv);
