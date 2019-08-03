@@ -66,8 +66,8 @@ p {
   border: solid 0.2em #342922;
   border-radius: 0.3em;
   margin-top: 6em;
-  width: 897px;
-  height: 377px;
+  width: 100%;
+  height: 380px;
 }
 
 #containerSlideImages {
@@ -75,7 +75,8 @@ p {
 }
 
 .containerImageText {
-  height: 380px;
+  width: 100%;
+  height: auto;
 }
 
 .slideImage {
@@ -95,7 +96,7 @@ p {
   display: flex;
   justify-content: center;
   position: relative;
-  bottom: 4em;
+  bottom: 17em;
 }
 
 #leftArrow {
