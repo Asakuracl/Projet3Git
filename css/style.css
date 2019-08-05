@@ -96,8 +96,7 @@ p {
 #buttonContainer {
   display: flex;
   justify-content: center;
-  position: relative;
-  bottom: 17em;
+  margin-top: 1em;
 }
 
 #leftArrow {
