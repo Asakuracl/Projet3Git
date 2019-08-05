@@ -61,7 +61,7 @@ p {
 /* Section Un*/
 
 #containerSlideshow {
-  /*overflow: hidden;*/
+  overflow: hidden;
   box-shadow: 0.5em 0.5em 3em #342922;
   border: solid 0.2em #342922;
   border-radius: 0.3em;
@@ -445,18 +445,11 @@ footer {
     margin: 6% 8%;
   }
 
-  /* work on it
-  #containerSlideshow {
+  .slideText {
+    top: 13%;
+    right: 5%;
+    font-size: 15px;
   }
-
-  #containerSlideImages {
-  }
-
-  .slideImage {
-    max-width: 100%;
-    height: auto;
-  }
-  */
 
   #sectionDeux {
     width: auto;
