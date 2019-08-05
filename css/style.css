@@ -342,7 +342,9 @@ footer {
   }
 */
   .slideText {
-    right: 5.5em;
+    right: 5%;
+    top: 10%;
+    font-size: 25px;
   }
 
   #sectionDeux {
