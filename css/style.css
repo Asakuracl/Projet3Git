@@ -85,12 +85,11 @@ p {
 
 .slideText {
   position: absolute;
-  top: 15%;
+  top: 10%;
   right: 28%;
   font-size: 30px;
   text-align: end;
   font-weight: bold;
-  margin-bottom: -25%;
 }
 
 #buttonContainer {
@@ -343,7 +342,6 @@ footer {
 */
   .slideText {
     right: 5%;
-    top: 10%;
     font-size: 25px;
   }
 
