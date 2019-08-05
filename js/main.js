@@ -8,7 +8,7 @@ $("#slideImage").on("mouseover", function () {
     }, 500)
 });
 
-
+// for burger menu
 $("#buttonMenu").on("click", function () {
     $("#myLinks").animate({
         height: "toggle"
