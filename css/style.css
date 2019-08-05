@@ -61,16 +61,16 @@ p {
 /* Section Un*/
 
 #containerSlideshow {
-  overflow: hidden;
+  /*overflow: hidden;*/
   box-shadow: 0.5em 0.5em 3em #342922;
   border: solid 0.2em #342922;
   border-radius: 0.3em;
   margin-top: 6em;
-  padding-bottom: 1em;
 }
 
 #containerSlideImages {
   display: flex;
+  margin-left: 0%;
 }
 
 .containerImageText {
@@ -79,17 +79,18 @@ p {
 
 .slideImage {
   max-width: 100%;
-  margin-left: 0%;
   transition: margin-left 1.5s cubic-bezier(0.2, 1.02, 0.63, 0.68);
+  margin-left: 0%;
 }
 
 .slideText {
-  position: relative;
-  bottom: 13em;
-  right: 1em;
+  position: absolute;
+  top: 15%;
+  right: 28%;
   font-size: 30px;
   text-align: end;
   font-weight: bold;
+  margin-bottom: -25%;
 }
 
 #buttonContainer {
