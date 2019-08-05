@@ -2,7 +2,7 @@
 
 $(".jqButton").hide();
 
-$("#slideImage").on("mouseover", function () {
+$("#containerSlideshow").on("mouseover", function () {
     $(".jqButton").animate({
         height: "show"
     }, 500)
