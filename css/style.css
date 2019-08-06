@@ -69,10 +69,6 @@ p {
   display: flex;
 }
 
-#containerSlideImages {
-  display: flex;
-}
-
 .containerSlide {
   flex: 1 0 100%;
   background-color: rgba(52, 41, 34, 0.9);
