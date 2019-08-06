@@ -61,35 +61,38 @@ p {
 /* Section Un*/
 
 #containerSlideshow {
-  overflow: hidden;
+  /*overflow: hidden;*/
   box-shadow: 0.5em 0.5em 3em #342922;
   border: solid 0.2em #342922;
   border-radius: 0.3em;
   margin-top: 10%;
+  display: flex;
 }
 
 #containerSlideImages {
   display: flex;
-  margin-left: 0%;
 }
 
 .containerImageText {
   flex: 1 0 100%;
+  background-color: rgba(52, 41, 34, 0.9);
 }
 
 .slideImage {
   max-width: 100%;
   transition: margin-left 1.5s cubic-bezier(0.2, 1.02, 0.63, 0.68);
+  padding-left: 0%;
+}
+
+.defautJs {
   margin-left: 0%;
 }
 
 .slideText {
-  position: absolute;
-  top: 10%;
-  right: 28%;
-  font-size: 30px;
-  text-align: end;
+  font-size: 25px;
   font-weight: bold;
+  margin: 0% 0% 0% 1%;
+  color: #cc9f18;
 }
 
 #buttonContainer {
