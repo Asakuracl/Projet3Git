@@ -78,4 +78,4 @@ const slider = new sliderShow(container, image);
 
 
 //to start the auto slide, remove the comment below
-//slider.lancerDiap();
+slider.lancerDiap();
