@@ -18,9 +18,9 @@ class countdown {
 
         this.formulBouton = document.querySelector("#formulBouton");
 
-        this.formulBouton.addEventListener("click", this.cancel.bind(this));
+        this.formulBouton.addEventListener("click", this.reset.bind(this));
 
-        this.btCancelReservation.addEventListener("click", this.cancel.bind(this));
+        this.btCancelReservation.addEventListener("click", this.reset.bind(this));
 
         //minute configuration
         this.addMin = 20;
