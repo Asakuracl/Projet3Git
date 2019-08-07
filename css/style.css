@@ -61,7 +61,7 @@ p {
 /* Section Un*/
 
 #containerSlideshow {
-  /*overflow: hidden;*/
+  overflow: hidden;
   box-shadow: 0.5em 0.5em 3em #342922;
   border: solid 0.2em #342922;
   border-radius: 0.3em;
@@ -77,12 +77,13 @@ p {
 .slideImage {
   max-width: 100%;
   transition: margin-left 1.5s cubic-bezier(0.2, 1.02, 0.63, 0.68);
-  padding-left: 0%;
 }
 
+/*
 .defautJs {
   margin-left: 0%;
 }
+*/
 
 .slideText {
   font-size: 25px;
