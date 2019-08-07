@@ -72,18 +72,12 @@ p {
 .containerSlide {
   flex: 1 0 100%;
   background-color: rgba(52, 41, 34, 0.9);
+  transition: margin-left 1.5s cubic-bezier(0.2, 1.02, 0.63, 0.68);
 }
 
 .slideImage {
   max-width: 100%;
-  transition: margin-left 1.5s cubic-bezier(0.2, 1.02, 0.63, 0.68);
 }
-
-/*
-.defaultJs {
-  margin-left: 0%;
-}
-*/
 
 .slideText {
   font-size: 25px;
