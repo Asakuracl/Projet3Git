@@ -1,7 +1,7 @@
 //Slider
 
 class sliderShow {
-    constructor(container, images) {
+    constructor(container, image) {
         this.container = container;
         this.image = image;
         this.variable = 0;
@@ -72,9 +72,9 @@ class sliderShow {
 
 const container = document.querySelectorAll(".containerSlide");
 
-const images = document.querySelector(".defaultJs");
+const image = document.querySelector(".defaultJs");
 
-const slider = new sliderShow(container, images);
+const slider = new sliderShow(container, image);
 
 
 //to start the auto slide, remove the comment below
