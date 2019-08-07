@@ -3,7 +3,7 @@
 class sliderShow {
     constructor(container, images) {
         this.container = container;
-        this.images = images;
+        this.image = image;
         this.variable = 0;
         this.dist = -100;
         this.temps = 5000;
