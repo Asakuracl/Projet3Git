@@ -75,7 +75,7 @@ class sliderShow {
 }
 
 
-const container = document.querySelectorAll(".slideImg");
+const container = document.querySelectorAll(".containerSlide");
 
 const images = document.querySelector(".defaultJs");
 
