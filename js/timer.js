@@ -67,6 +67,9 @@ class countdown {
         //to clear the sessionstorage if reserved on timerOn
         clearInterval(this.count);
         sessionStorage.clear();
+        this.tempsData.innerHTML = "";
+        this.reservationData.style.opacity = "0";
+
     }
 
     cancel() {
