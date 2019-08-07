@@ -11,6 +11,6 @@ $("#containerSlideshow").on("mouseover", function () {
 $("#buttonMenu").on("click", function () {
     $("#myLinks").animate({
         height: "toggle"
-    }, 600, "swing")
+    }, 370, "swing")
 });
 
