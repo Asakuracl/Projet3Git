@@ -391,7 +391,7 @@ footer {
     position: fixed;
     top: 0.1%;
     align-items: flex-start;
-    width: auto;
+    width: 94%;
     height: auto;
     display: flex;
     flex-direction: column;
