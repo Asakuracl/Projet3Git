@@ -32,10 +32,7 @@ class sliderShow {
         if (this.variable > this.container.length - 1) {
             this.variable = 0;
         }
-        for (let image of this.images) {
-            image.style.marginLeft = -Math.abs((this.variable * this.dist)) + "%";
-        }
-
+        image.style.marginLeft = -Math.abs((this.variable * this.dist)) + "%";
     }
 
     buttonPrev() {
@@ -43,9 +40,7 @@ class sliderShow {
         if (this.variable < 0) {
             this.variable = this.container.length - 1;
         }
-        for (let image of this.images) {
-            image.style.marginLeft = -Math.abs((this.variable * this.dist)) + "%";
-        }
+        image.style.marginLeft = -Math.abs((this.variable * this.dist)) + "%";
     }
 
     buttonStop() {
