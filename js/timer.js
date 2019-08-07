@@ -63,8 +63,14 @@ class countdown {
         }
     }
 
+    reset() {
+        //to clear the sessionstorage if reserved on timerOn
+        clearInterval(this.count);
+        sessionStorage.clear();
+    }
+
     cancel() {
-        //to clear the sessionstorage
+        //to clear the sessionstorage on annuler
         clearInterval(this.count);
         sessionStorage.clear();
         this.tempsData.innerHTML = "Votre réservation est annulé !";
