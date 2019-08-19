@@ -62,7 +62,7 @@ p {
 #containerSlideshow {
   overflow: hidden;
   box-shadow: 0.5em 0.5em 3em #342922;
-  border: solid 0.2em #342922;
+  border: solid 0.22em #342922;
   border-radius: 0.3em;
   margin-top: 10%;
   display: flex;
