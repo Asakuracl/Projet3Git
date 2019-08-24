@@ -158,6 +158,8 @@ p {
     #cc9f18 50%,
     rgba(52, 41, 34, 0.8) 0%
   );
+  /*work on it, add opacity delete when done*/
+  opacity: 0;
 }
 
 #infoStation p {
@@ -245,7 +247,8 @@ input,
   );
 
   text-align: center;
-  opacity: 0;
+  /*work on it, opacity to 1*/
+  opacity: 1;
 }
 
 .btCanvasCss {
