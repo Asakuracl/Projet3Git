@@ -225,6 +225,8 @@ input,
 /* section canvas head */
 #canvas {
   background-color: #342922;
+  height: "150";
+  width: "300";
 }
 
 #canvasHead {
