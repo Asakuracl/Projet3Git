@@ -223,6 +223,9 @@ input,
 }
 
 /* section canvas head */
+#canvas {
+  background-color: #342922;
+}
 
 #canvasHead {
   position: relative;
