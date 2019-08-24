@@ -31,7 +31,7 @@ class reservation {
 
         this.canvas.addEventListener("mousemove", this.signatureDraw.bind(this));
 
-        window.addEventListener("load", this.signatureDraw.bind(this));
+        this.canvas.addEventListener("load", this.signatureDraw.bind(this));
         //work
 
         /* work on it
@@ -96,8 +96,16 @@ class reservation {
         this.painting = false;
     }
 
-    signatureDraw() {
-        this.ctx.strokeRect(10, 10, 20, 20);
+    signatureDraw(e) {
+        /*
+        if (!this.painting) return;
+        this.ctx.strokeStyle = "red";
+        this.ctx.lineWidth = 10;
+        this.ctx.lineCap = "round";
+        this.ctx.lineTo(e.clientX, e.clientY);
+        this.ctx.stroke();
+        console.log(this.ctx.lineWWidth);
+        */
     }
     clear() {
         this.signature.clear();
