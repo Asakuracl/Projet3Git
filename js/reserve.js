@@ -78,6 +78,7 @@ class reservation {
 
     canvasSignature() {
         this.canvas = document.querySelector("#canvas");
+        this.ctx = this.canvas.getContext("2d");
     }
     clear() {
         this.signature.clear();
