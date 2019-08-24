@@ -18,11 +18,13 @@ class reservation {
         this.prenom = document.querySelector("#Prenom");
 
         this.helpId = document.getElementById("helpId");
-
+        //work
         this.canvas = document.querySelector("#canvas");
 
         this.ctx = this.canvas.getContext("2d");
 
+        this.painting = false;
+        //work
         window.addEventListener("load", this.canvasSignature.bind(this));
         /* work on it
         // add signature pad API
