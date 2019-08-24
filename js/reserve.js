@@ -27,9 +27,11 @@ class reservation {
 
         this.canvas.addEventListener("mousedown", this.signatureStart.bind(this));
 
-        this.canvas.addEventListener("mouseup", this.signatureStart.bind(this));
+        this.canvas.addEventListener("mouseup", this.signatureEnd.bind(this));
 
-        window.addEventListener("load", this.canvasSignature.bind(this));
+        this.canvas.addEventListener("mousemove", this.signatureDraw.bind(this));
+
+        window.addEventListener("load", this.signatureDraw.bind(this));
         //work
 
         /* work on it
@@ -94,7 +96,7 @@ class reservation {
         this.painting = false;
     }
 
-    canvasSignature() {
+    signatureDraw() {
         this.ctx.strokeRect(10, 10, 20, 20);
     }
     clear() {
