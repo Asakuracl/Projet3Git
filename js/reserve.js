@@ -77,8 +77,8 @@ class reservation {
     }
 
     canvasSignature() {
-        this.canvas = document.querySelector("#canvas");
-        this.ctx = this.canvas.getContext("2d");
+
+        this.ctx.strokeRect(10, 10, 20, 20);
     }
     clear() {
         this.signature.clear();
