@@ -22,12 +22,14 @@ class reservation {
         this.canvas = document.querySelector("#canvas");
 
         // add signature pad API
+        /* work on it
         this.signature = new SignaturePad(this.canvas, {
             minWidth: 1,
             maxWidth: 1,
             penColor: "rgb(204, 159, 24)",
             backgroundColor: "rgba(52,41,34, 1)"
         })
+        */
 
         this.canvasHead = document.querySelector("#canvasHead");
 
