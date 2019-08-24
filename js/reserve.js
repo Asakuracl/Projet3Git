@@ -23,6 +23,8 @@ class reservation {
 
         this.ctx = this.canvas.getContext("2d");
 
+        this.draw = 0;
+
         this.painting = false;
 
         this.canvas.addEventListener("mousedown", this.signatureStart.bind(this));
@@ -106,6 +108,7 @@ class reservation {
         this.ctx.stroke();
         this.ctx.beginPath();
         this.ctx.moveTo(e.offsetX, e.offsetY);
+        this.draw++
     }
 
     clear() {
