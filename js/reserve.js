@@ -66,8 +66,6 @@ class reservation {
 
         this.btReset.addEventListener("click", this.clear.bind(this));
 
-        this.btValid.addEventListener("click", this.empty.bind(this));
-
         this.btValid.addEventListener("click", this.valid.bind(this));
 
     }
@@ -115,12 +113,8 @@ class reservation {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
 
-    empty() {
-
-    }
-
     valid() {
-        if (this.signature.isEmpty()) {
+        if (this.draw < 15) {
             alert("Merci de signer s'il vous plait.")
 
         } else {
