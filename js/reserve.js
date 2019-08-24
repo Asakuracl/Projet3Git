@@ -89,6 +89,7 @@ class reservation {
     }
 
     signatureStart() {
+        this.ctx.beginPath();
         this.painting = true;
     }
 
@@ -97,16 +98,19 @@ class reservation {
     }
 
     signatureDraw(e) {
-        /*
+
         if (!this.painting) return;
-        this.ctx.strokeStyle = "red";
-        this.ctx.lineWidth = 10;
+        this.ctx.strokeStyle = "#cc9f18";
+        this.ctx.lineWidth = 4;
         this.ctx.lineCap = "round";
-        this.ctx.lineTo(e.clientX, e.clientY);
+
+        this.ctx.lineTo(e.offsetX, e.offsetY);
         this.ctx.stroke();
-        console.log(this.ctx.lineWWidth);
-        */
+        this.ctx.beginPath();
+        this.ctx.moveTo(e.offsetX, e.offsetY);
+
     }
+
     clear() {
         this.signature.clear();
     }
