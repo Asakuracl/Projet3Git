@@ -19,7 +19,7 @@ class reservation {
 
         this.helpId = document.getElementById("helpId");
 
-        this.canvas = document.querySelector("#canvas");
+        //this.canvas = document.querySelector("#canvas");
 
         window.addEventListener("load", this.canvasSignature.bind(this));
         /* work on it
@@ -77,7 +77,7 @@ class reservation {
     }
 
     canvasSignature() {
-        console.log('ok');
+        this.canvas = document.querySelector("#canvas");
     }
     clear() {
         this.signature.clear();
