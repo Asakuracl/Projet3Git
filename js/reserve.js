@@ -19,7 +19,9 @@ class reservation {
 
         this.helpId = document.getElementById("helpId");
 
-        //this.canvas = document.querySelector("#canvas");
+        this.canvas = document.querySelector("#canvas");
+
+        this.ctx = this.canvas.getContext("2d");
 
         window.addEventListener("load", this.canvasSignature.bind(this));
         /* work on it
@@ -77,7 +79,6 @@ class reservation {
     }
 
     canvasSignature() {
-
         this.ctx.strokeRect(10, 10, 20, 20);
     }
     clear() {
