@@ -24,8 +24,14 @@ class reservation {
         this.ctx = this.canvas.getContext("2d");
 
         this.painting = false;
-        //work
+
+        this.canvas.addEventListener("mousedown", this.signatureStart.bind(this));
+
+        this.canvas.addEventListener("mouseup", this.signatureStart.bind(this));
+
         window.addEventListener("load", this.canvasSignature.bind(this));
+        //work
+
         /* work on it
         // add signature pad API
         this.signature = new SignaturePad(this.canvas, {
