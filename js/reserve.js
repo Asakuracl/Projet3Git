@@ -21,8 +21,9 @@ class reservation {
 
         this.canvas = document.querySelector("#canvas");
 
-        // add signature pad API
+        window.addEventListener("load", this.canvasSignature.bind(this));
         /* work on it
+        // add signature pad API
         this.signature = new SignaturePad(this.canvas, {
             minWidth: 1,
             maxWidth: 1,
@@ -75,6 +76,9 @@ class reservation {
         }
     }
 
+    canvasSignature() {
+        console.log('ok');
+    }
     clear() {
         this.signature.clear();
     }
