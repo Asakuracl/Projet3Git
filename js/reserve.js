@@ -80,6 +80,14 @@ class reservation {
         }
     }
 
+    signatureStart() {
+        this.painting = true;
+    }
+
+    signatureEnd() {
+        this.painting = false;
+    }
+
     canvasSignature() {
         this.ctx.strokeRect(10, 10, 20, 20);
     }
