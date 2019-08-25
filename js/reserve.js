@@ -59,7 +59,7 @@ class reservation {
 
     reserve() {
         if ((this.nom.validity.valueMissing) || (this.prenom.validity.valueMissing)) {
-            this.helpId.innerHTML = "Id manquant !"
+            this.helpId.innerHTML = "Identifiant manquant!"
         } else if ((!this.regexId.test(this.nom.value)) || (!this.regexId.test(this.prenom.value))) {
             this.helpId.innerHTML = "Id invalide !"
         } else {
