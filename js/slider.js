@@ -9,9 +9,9 @@ class sliderShow {
         this.temps = 5000;
         this.interv = null;
         this.demarre = false;
+        this.lancerDiap();
 
         //listener on click bouton
-
         this.buttonLeft = document.querySelector("#leftArrow");
         this.buttonLeft.addEventListener("click", this.buttonPrev.bind(this));
 
@@ -23,7 +23,6 @@ class sliderShow {
 
         //listener on keyboard
         document.addEventListener("keydown", this.keyboard.bind(this));
-
     }
 
     // Change image with click on button
@@ -66,16 +65,10 @@ class sliderShow {
     lancerDiap() {
         this.interv = setInterval(this.buttonNext.bind(this), this.temps);
     }
-
 }
-
 
 const container = document.querySelectorAll(".containerSlide");
 
 const image = document.querySelector(".defaultJs");
 
 const slider = new sliderShow(container, image);
-
-
-//to start the auto slide, remove the comment below
-slider.lancerDiap();
