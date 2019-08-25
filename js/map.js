@@ -2,10 +2,10 @@
 
 class leafMap {
     constructor(map) {
-
         this.map = map;
         this.urlAkey = "https://api.jcdecaux.com/vls/v1/stations?contract=toulouse&apiKey=034bd9ac4f75e74fe7ca15956aec17853c048759";
 
+        this.init();
     }
 
     setMarker(reponse) {
@@ -83,4 +83,4 @@ L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
 
 const mymap = new leafMap(map);
 
-mymap.init();
+//mymap.init();
