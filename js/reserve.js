@@ -3,7 +3,6 @@
 class reservation {
     constructor(btReserve) {
         this.btReserve = btReserve;
-
         this.bike = document.querySelector("#stationBikes");
         this.formul = document.querySelector("#formul");
         this.formulBt = document.querySelector("#formulBouton");
@@ -18,15 +17,14 @@ class reservation {
         this.prenom = document.querySelector("#Prenom");
 
         this.helpId = document.getElementById("helpId");
-        //work
+
+        // canvas configuration
         this.canvas = document.querySelector("#canvas");
-
         this.ctx = this.canvas.getContext("2d");
-
         this.draw = 0;
-
         this.painting = false;
 
+        // canvas listener
         this.canvas.addEventListener("mousedown", this.signatureStart.bind(this));
 
         this.canvas.addEventListener("mouseup", this.signatureEnd.bind(this));
@@ -34,23 +32,13 @@ class reservation {
         this.canvas.addEventListener("mousemove", this.signatureDraw.bind(this));
 
         this.canvas.addEventListener("load", this.signatureDraw.bind(this));
-        //work
-
-        /* work on it
-        // add signature pad API
-        this.signature = new SignaturePad(this.canvas, {
-            minWidth: 1,
-            maxWidth: 1,
-            penColor: "rgb(204, 159, 24)",
-            backgroundColor: "rgba(52,41,34, 1)"
-        })
-        */
 
         this.canvasHead = document.querySelector("#canvasHead");
 
         this.addressData = document.querySelector("#addressData");
 
         this.reservationData = document.querySelector("#reservationData");
+
         this.nomData = document.querySelector("#nomData");
 
         this.nomValue = document.querySelector("#nomValue");
@@ -67,17 +55,14 @@ class reservation {
         this.btReset.addEventListener("click", this.clear.bind(this));
 
         this.btValid.addEventListener("click", this.valid.bind(this));
-
     }
 
     reserve() {
-
         if ((this.nom.validity.valueMissing) || (this.prenom.validity.valueMissing)) {
             this.helpId.innerHTML = "Id manquant !"
         } else if ((!this.regexId.test(this.nom.value)) || (!this.regexId.test(this.prenom.value))) {
             this.helpId.innerHTML = "Id invalide !"
         } else {
-            //this.reservationData.style.opacity = "0";
             this.helpId.innerHTML = "";
             this.btReserve.style.opacity = "0";
             this.formul.style.opacity = "0";
@@ -111,12 +96,13 @@ class reservation {
 
     clear() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.draw = 0;
     }
 
     valid() {
-        if (this.draw < 15) {
-            alert("Merci de signer s'il vous plait.")
-
+        if (this.draw < 20) {
+            alert("Merci de signer s'il vous plait.");
+            this.draw = 0;
         } else {
             this.reservationData.style.opacity = "1";
             this.canvas.style.opacity = "0";
@@ -126,9 +112,7 @@ class reservation {
             this.nomValue.innerHTML = localStorage.getItem("nomValue");
             this.prenomValue.innerHTML = localStorage.getItem("prenomValue");
         }
-
     }
-
 }
 
 const btReserve = document.querySelector("#formulBouton");
