@@ -158,8 +158,6 @@ p {
     #cc9f18 50%,
     rgba(52, 41, 34, 0.8) 0%
   );
-  /*work on it, add display*/
-  display: none;
 }
 
 #infoStation p {
@@ -227,8 +225,10 @@ input,
 /* section canvas head */
 #canvas {
   background-color: #342922;
+  /*
   height: "150";
   width: "300";
+*/
 }
 
 #canvasHead {
@@ -247,8 +247,7 @@ input,
   );
 
   text-align: center;
-  /*work on it, opacity to 1*/
-  opacity: 1;
+  opacity: 0;
 }
 
 .btCanvasCss {
