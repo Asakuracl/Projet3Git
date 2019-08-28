@@ -25,16 +25,14 @@ class reservation {
         this.draw = 0;
         this.painting = false;
 
-        // canvas listener
-
-        //mouse
+        // canvas listener on mouse
         this.canvas.addEventListener("mousedown", this.signatureStart.bind(this));
 
         this.canvas.addEventListener("mouseup", this.signatureEnd.bind(this));
 
         this.canvas.addEventListener("mousemove", this.signatureDraw.bind(this));
 
-        //touch
+        //canvas listener on touch
         this.canvas.addEventListener("touchstart", this.signatureTouchStart.bind(this));
 
         this.canvas.addEventListener("touchend", this.signatureTouchEnd.bind(this));
@@ -104,7 +102,6 @@ class reservation {
         this.ctx.stroke();
         this.ctx.beginPath();
         this.ctx.moveTo(e.offsetX, e.offsetY);
-        //console.log(e.offsetX)
         this.draw++
     }
 
