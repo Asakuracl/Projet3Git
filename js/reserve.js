@@ -25,11 +25,20 @@ class reservation {
         this.painting = false;
 
         // canvas listener
+
+        //mouse
         this.canvas.addEventListener("mousedown", this.signatureStart.bind(this));
 
         this.canvas.addEventListener("mouseup", this.signatureEnd.bind(this));
 
         this.canvas.addEventListener("mousemove", this.signatureDraw.bind(this));
+
+        //touch
+        this.canvas.addEventListener("touchstart", this.signatureStart.bind(this));
+
+        this.canvas.addEventListener("touchend", this.signatureEnd.bind(this));
+
+        this.canvas.addEventListener("touchmove", this.signatureDraw.bind(this));
 
         this.canvas.addEventListener("load", this.signatureDraw.bind(this));
 
