@@ -20,6 +20,7 @@ class reservation {
 
         // canvas configuration
         this.canvas = document.querySelector("#canvas");
+        //this.touches = e.touches[0];
         this.ctx = this.canvas.getContext("2d");
         this.draw = 0;
         this.painting = false;
@@ -103,13 +104,14 @@ class reservation {
         this.ctx.stroke();
         this.ctx.beginPath();
         this.ctx.moveTo(e.offsetX, e.offsetY);
+        //console.log(e.offsetX)
         this.draw++
     }
 
     //touch
-    signatureTouchStart() {
+    signatureTouchStart(e) {
+        e.preventDefault();
         this.ctx.beginPath();
-        console.log("so ?")
         this.painting = true;
     }
 
@@ -118,14 +120,15 @@ class reservation {
     }
 
     signatureTouchDraw(e) {
+        this.test = this.canvas.getBoundingClientRect(e);
         if (!this.painting) return;
         this.ctx.strokeStyle = "#cc9f18";
         this.ctx.lineWidth = 4;
         this.ctx.lineCap = "round";
-        this.ctx.lineTo(e.touches['0'].clientX, e.touches['0'].clientY);
+        this.ctx.lineTo(e.touches[0].clientX, e.touches[0].clientY);
         this.ctx.stroke();
         this.ctx.beginPath();
-        this.ctx.moveTo(e.touches['0'].clientX, e.touches['0'].clientY);
+        this.ctx.moveTo(e.touches[0].clientX, e.touches[0].clientY);
         this.draw++
     }
 
