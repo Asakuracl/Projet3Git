@@ -34,13 +34,15 @@ class reservation {
         this.canvas.addEventListener("mousemove", this.signatureDraw.bind(this));
 
         //touch
-        this.canvas.addEventListener("touchstart", this.signatureStart.bind(this));
+        this.canvas.addEventListener("touchstart", this.signatureTouchStart.bind(this));
 
-        this.canvas.addEventListener("touchend", this.signatureEnd.bind(this));
+        this.canvas.addEventListener("touchend", this.signatureTouchEnd.bind(this));
 
-        this.canvas.addEventListener("touchmove", this.signatureDraw.bind(this));
+        this.canvas.addEventListener("touchmove", this.signatureTouchDraw.bind(this));
 
         this.canvas.addEventListener("load", this.signatureDraw.bind(this));
+
+        this.canvas.addEventListener("load", this.signatureTouchDraw.bind(this));
 
         this.canvasHead = document.querySelector("#canvasHead");
 
@@ -82,6 +84,7 @@ class reservation {
         }
     }
 
+    //mouse
     signatureStart() {
         this.ctx.beginPath();
         this.painting = true;
@@ -100,6 +103,28 @@ class reservation {
         this.ctx.stroke();
         this.ctx.beginPath();
         this.ctx.moveTo(e.offsetX, e.offsetY);
+        this.draw++
+    }
+
+    //touch
+    signatureTouchStart() {
+        this.ctx.beginPath();
+        this.painting = true;
+    }
+
+    signatureTouchEnd() {
+        this.painting = false;
+    }
+
+    signatureTouchDraw(e) {
+        if (!this.painting) return;
+        this.ctx.strokeStyle = "#cc9f18";
+        this.ctx.lineWidth = 4;
+        this.ctx.lineCap = "round";
+        this.ctx.lineTo(e.touches['0'].clientX, e.touches['0'].clientY);
+        this.ctx.stroke();
+        this.ctx.beginPath();
+        this.ctx.moveTo(e.touches['0'].clientX, e.touches['0'].clientY);
         this.draw++
     }
 
