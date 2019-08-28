@@ -5,7 +5,7 @@ class leafMap {
         this.map = map;
         this.urlAkey = "https://api.jcdecaux.com/vls/v1/stations?contract=toulouse&apiKey=034bd9ac4f75e74fe7ca15956aec17853c048759";
 
-        this.init();
+        this.creatMarker();
     }
 
     setMarker(reponse) {
@@ -66,7 +66,7 @@ class leafMap {
         req.send(null);
     }
 
-    init() {
+    creatMarker() {
         this.ajaxGet(this.urlAkey, this.setMarker.bind(this))
     };
 
@@ -82,5 +82,3 @@ L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 const mymap = new leafMap(map);
-
-//mymap.init();
