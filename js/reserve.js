@@ -120,7 +120,7 @@ class reservation {
     }
 
     signatureTouchDraw(e) {
-        this.test = this.canvas.getBoundingClientRect(e);
+        this.rectZone = this.canvas.getBoundingClientRect(e);
         if (!this.painting) return;
         this.ctx.strokeStyle = "#cc9f18";
         this.ctx.lineWidth = 4;
