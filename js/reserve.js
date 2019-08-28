@@ -125,10 +125,10 @@ class reservation {
         this.ctx.strokeStyle = "#cc9f18";
         this.ctx.lineWidth = 4;
         this.ctx.lineCap = "round";
-        this.ctx.lineTo(e.touches[0].clientX, e.touches[0].clientY);
+        this.ctx.lineTo(e.touches[0].clientX - this.rectZone.left, e.touches[0].clientY - this.rectZone.top);
         this.ctx.stroke();
         this.ctx.beginPath();
-        this.ctx.moveTo(e.touches[0].clientX, e.touches[0].clientY);
+        this.ctx.moveTo(e.touches[0].clientX - this.rectZone.left, e.touches[0].clientY - this.rectZone.top);
         this.draw++
     }
 
