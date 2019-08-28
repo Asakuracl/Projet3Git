@@ -109,6 +109,7 @@ class reservation {
     //touch
     signatureTouchStart() {
         this.ctx.beginPath();
+        console.log("so ?")
         this.painting = true;
     }
 
