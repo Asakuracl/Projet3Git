@@ -35,7 +35,7 @@ class reservation {
         //canvas listener on touch
         this.canvas.addEventListener("touchstart", this.signatureTouchStart.bind(this));
 
-        this.canvas.addEventListener("touchend", this.signatureTouchEnd.bind(this));
+        this.canvas.addEventListener("touchend", this.signatureEnd.bind(this));
 
         this.canvas.addEventListener("touchmove", this.signatureTouchDraw.bind(this));
 
@@ -110,10 +110,6 @@ class reservation {
         e.preventDefault();
         this.ctx.beginPath();
         this.painting = true;
-    }
-
-    signatureTouchEnd() {
-        this.painting = false;
     }
 
     signatureTouchDraw(e) {
